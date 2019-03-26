@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+<head profile="https://www.w3.org/1999/xhtml/vocab">
+	<title> | BitSafe</title>
+	<meta name="description" content="BitSafe is a leading Internet Payment Service Provider (IPSP) that has been enabling high-risk webmasters with building their online businesses since 1998." />
+	<meta name="viewport" content="width=device-width  initial-scale=1.0">
+	<meta property="og:title" content="Homepage - Putting Trust in Global Payments"/>
+	<meta property="og:description" content="BitSafe is a leading Internet Payment Service Provider (IPSP) that has been enabling high-risk webmasters with building their online businesses since 1998."/>
+	<meta property="og:image" content="../images.v2/logo.png"/>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300 400 600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+
+		<script type="text/javascript" src="https://dev.my.bitsafe.domains/assets/js/jsrender.min.js"></script>
+		<script type="text/javascript" src="https://dev.my.bitsafe.domains/includes/domains/fn-available-js.php"></script>
+<!-- 		<script type="text/javascript" src="http://register.freenom.com/js/login.js"></script> -->
+		<script type="text/javascript" src="https://dev.my.bitsafe.domains/includes/jscript/loggedon.php"></script>
+
+<script>
+      $(function() {
+        $( "#slider" ).slider({
+            step: 5, value: 90, max: 90
+        });
+	  });
+
+	  function process_pricing($str) {
+            $data = $.parseJSON($str);
+            $tmpl = $.templates("#domain_tmpl");
+            $html_tld = $tmpl.render($data.tld);
+            $("#tld_pricing").append($html_tld)
+        }
+
+	  $(function() {
+            $.getScript("/pricing_eur.json");
+        });
+
+     </script>
+
+
+</head>
+<body class="html home" id="bs-override">
+	<nav class="row header justify-content-md-center">
+		<a class="logo col-md-4">
+			<img class="logo__img" src="../images.v2/logo-bitsafe.png" />
+		</a>
+		<ul class="menu col-md-8">
+			<li class="menu-item">
+				<a class="menu-link" href="/services.html" title="Services">Services</a>
+				<ul class="submenu">
+					<li class="submenu-item">
+						<a class="submenu-link" href="" title="">Register a new domain</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link" href="" title="">Domain price chart</a>
+					</li>
+				</ul>
+			</li>
+			<li class="menu-item">
+				<a class="menu-link" href="/partners.html" title="Partners">Partners</a>
+				<ul class="submenu">
+					<li class="submenu-item">
+						<a class="submenu-link" href="" title="">Resellers</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link" href="" title="">IP Agencies</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link" href="" title="">Developers</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link" href="" title="">Anti-abuse API</a>
+					</li>
+				</ul>
+			</li>
+			<li class="menu-item">
+				<a class="menu-link" href="/about.html" title="About Bitsafe Domains">About Bitsafe Domains</a>
+				<ul class="submenu">
+					<li class="submenu-item">
+						<a class="submenu-link" href="" title="">Company</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link" href="" title="">Terms and conditions</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link" href="" title="">Press</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link" href="" title="">Jobs</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link" href="" title="">Contact</a>
+					</li>
+				</ul>
+			</li>
+			<li class="menu-item">
+				<a class="menu-link" href="/support.html" title="Support">Support</a>
+				<ul class="submenu">
+					<li class="submenu-item">
+						<a class="submenu-link" href="" title="">Knowledgebase</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link" href="" title="">Report abuse</a>
+					</li>
+				</ul>
+			</li>
+			<li class="menu-item signin">
+				<a class="menu-link" href="" title="Support">Sign in</a>
+			</li>
+			<li class="menu-item languages">
+				<a class="menu-link" href="">EN</a>
+				<ul class="submenu">
+					<li class="submenu-item">
+						<a class="submenu-link" href="/nl/" title="">Nederlands</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link" href="/en/" title="">Deutsch</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+	<!-- FIRST CHECK -->
+
+	<div class="second-search">
+            <div class="container domainCheck domainResults">
+                <div class="row justify-content-md-center">
+                    <div class="col-md-7 search-wrapper">
+                        <form method="get" class="searchform" id="domainForm">
+                            <input type="text" id="idn" placeholder="Register your domain" name="domainname" />
+                            <a class="button" id="submitBtn">Check</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+		</div>
+		
+		<div class="wave wave--blue"></div>
+
+<input type="hidden" id="top_domain_get_it_free_text" value="Get it for Free!" />
+<input type="hidden" id="top_domain_get_it_now_text" value="Get it now"  />
+
+<div class="domainResult secondSection otherFreeDomains">
+<div class="row margin padding centered">
+	<div class="col-md-12 domainRegister textCenter">
+		<h3 id="check_free_domains" style="display:none;">Get one of these domains. They are <strong>free</strong>!</h3>
+		<h3 id="check_free_special_domains" style="display:none;">Get one of these domains.<strong>Free</strong> or with a <strong>High Value</strong>!</h3>
+		<h3 id="check_special_domains" style="display:none;">Get one of these<strong>High Value</strong> domains!</h3>
+
+		<!-- PRICING -->
+
+<section class="domainPriceChart">
+	<!-- <div class="domainCheck domainResults transparentBackground ">
+		<div class="row margin centered ">
+			
+			<div class="col-md-7 search-wrapper">
+				<form method="get" class="searchform" id="domainForm">
+					<input type="text" id="idn" placeholder="Register your domain" name="domainname" />
+					<a class="button" id="submitBtn">Search</a>
+				</form>
+			</div>
+			
+			<div class="span8 borderRadius noFloat inputFields noOverflow">
+				<form method="get" class="searchform" id="domainForm2">
+					<input type="text" id="idn" value="Find a new FREE domain" name="domainname" placeholder=""/>
+					<a id="submitBtn">Check Availability</a>
+				</form>
+			</div>
+
+		</div>
+	</div> -->
+	<div class="domainResult thirdSection otherCostPriceDomains" style="padding-bottom: 50px">
+		<div class="row margin padding centered">
+			<div class="span10 domainRegister noFloat">
+				<h3><strong>Domain price chart</strong></h3>
+				<p>This Domain Price Chart is updated daily. It contains the current annual pricing for domain registrations, renewals and transfers in all the Top Level Domains that Freenom operates or manages. The pricing is converted into one currency, as listed above. Pricing of all paid domains are based on cost price, according to the following formula:</p>
+				<p><i>Cost price + gateway fee + ICANN fee (if applicable)</i></p>
+				<p>This Domain Price Chart is only available in English and should be used as reference only. Actual pricing may vary and can be retrieved on a per domain name basis at My Freenom or with the Freenom API. Special and Premium Domains are excluded from this list. Pricing of Special and Premium domains can be retrieved on a per domain name basis at My Freenom or with the Freenom API.</p>
+				<table class="resultTable borderRadius tlds">
+					<thead class="filter" id="tld_pricing">
+						<tr>
+							<th>							
+								Top Level Domain
+							</th>
+							<th>							
+								Registration
+							</th>
+							<th>							
+								Renewal
+							</th>
+							<th>							
+								Transfer 
+							</th>
+						</tr>
+					</thead>
+				</table>
+				<table class="resultTable borderRadius services">
+					<thead class="filter" id="tld_services">
+						<tr>
+							<th>							
+								Other services
+							</th>
+							<th>							
+								Per year
+							</th>
+						</tr>
+					</thead>
+						<tr>
+							<td class="service">URL Forwarding</td>
+							<td class="price">Free</td>
+						</tr>
+						<tr>
+							<td class="service">Email Forwarding</td>
+							<td class="price">Free</td>
+						</tr>
+						<tr>
+							<td class="service">Freenom DNS Service</td>
+							<td class="price">Free</td>
+						</tr>
+						<tr>
+							<td class="service">ID Shield</td>
+							<td class="price">Free</td>
+						</tr>
+				</table>
+			</div>
+		</div>
+
+		<script id="paiddomain_tmpl" type="text/x-jsrender">
+			<tr class="paid_rows" location="{{:location}}" style="display: none;">
+				<td class="firstColumn">
+					<div class="domainName">{{:domain}}</span></div>
+					<div class="domainLabel costPrice">Cost price</div>
+					<div class="domainExtension">{{:tld}}</div>
+				</td>
+				<td class="priceTable">
+					<div class="currency">{{:currency}}</div>
+					<div class="domainPrice">{{:price_int}}.<span class="cents">{{:price_cent}}</span>
+					</div>
+				</td>
+				<td class="priceTable">
+					<div class="currency">{{:currency}}</div>
+					<div class="domainPrice">{{:price_int}}.<span class="cents">{{:price_cent}}</span>
+					</div>
+				</td>
+				<td class="priceTable">
+					<div class="currency">{{:currency}}</div>
+					<div class="domainPrice">{{:price_int}}.<span class="cents">{{:price_cent}}</span>
+					</div>
+				</td>
+			</tr>
+		</script>
+	
+	</section>
+	
+	<!-- END PRICING -->
+	
+
+	<!-- RESULTS -->
+	<div class="allResults">
+
+		<!-- CHECK AGAIN -->
+		<div class="second-search">
+            <div class="container domainCheck domainResults">
+                <div class="row justify-content-md-center">
+                    <div class="col-md-7 search-wrapper">
+                        <form method="get" class="searchform" id="domainForm">
+                            <input type="text" id="idn" placeholder="Look up any domain" name="domainname" />
+                            <a class="button" id="submitBtn">Search</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+		</div>
+		
+		<div class="wave wave--blue"></div>
+
+        <div class="container domainResult zeroSection">
+            <div class="row margin padding centered">
+                <div class="col-md-12 domainRegister textCenter">
+                    <!-- ALERTS FOR DOMAINSTATUS -->
+                    <h2 class="alert">Sorry, <strong class="dname"></span></strong> is an invalid domain name.
+                        <a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=english" class="addToCart borderRadius">Checkout</a>
+                        <span class="selectedDomains">
+                            <a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=english"><span class="nrSelectedDomains">0</span> 
+                            <span class="multipleSelectedDomains">domains in cart</span>
+                            <span class="singleSelectedDomain" style="display:none">domain in cart</span>
+                            </a>
+                            <span class="maxCartReached" style="display:none"> (maximum reached <span class="popupBalloon balloonDown borderRadius borderRadius"><i class="fa fa-question-circle"></i><p>A maximum number of 10 domains can be registered within one single transaction. To register more domains in one transaction use the Freenom API and become a <a href="https://www.freenom.com/en/resellers.html" target="_blank">Freenom Reseller</a></p></span>)</span>
+                        </span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+		<div class="container domainResult firstSection">
+			<div class="row margin padding centered">
+				<div class="col-md-12 domainRegister textCenter">
+
+					<!-- ALERTS FOR DOMAINSTATUS -->
+					<div class="succes">Yes <strong class="dname"></strong> is available!
+							<a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=en" class="addToCart borderRadius">Checkout</a>
+							<span class="selectedDomains">
+									<a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=en">
+									<span class="nrSelectedDomains">0</span>
+									<span class="multipleSelectedDomains"> domains selected</span>
+									<span class="singleSelectedDomain" style="display:none"> domain selected</span>
+									</a>
+									<span class="maxCartReached" style="display:none"> (Max. reached <span class="popupBalloon balloonDown borderRadius borderRadius"><i class="fa fa-question-circle"></i><p>Maximum amount reached <a href="https://www.freenom.com/en/resellers.html" target="_blank">Become a reseller</a></p></span>)</span>
+							</span>
+					</div>
+
+					<div class="alert">Sorry, <strong class="dname"></span></strong> is not available.
+							<a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=en" class="addToCart borderRadius">Checkout</a>
+							<span class="selectedDomains">
+									<a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=en">
+									<span class="nrSelectedDomains">0</span>
+									<span class="multipleSelectedDomains"> domains selected</span>
+									<span class="singleSelectedDomain" style="display:none"> domain selected</span>
+									</a>
+									<span class="maxCartReached" style="display:none"> (Max. reached <span class="popupBalloon balloonDown borderRadius borderRadius"><i class="fa fa-question-circle"></i><p>Maximum amount reached <a href="https://www.freenom.com/en/resellers.html" target="_blank">Become a reseller</a></p></span>)</span>
+							</span>
+					</div>
+
+					<div class="no_tld_result">
+							<a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=en" class="addToCart borderRadius">Checkout</a>
+							<span class="selectedDomains">
+								 <a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=en"><span class="nrSelectedDomains">0</span>
+									<span class="multipleSelectedDomains"> domains selected</span>
+									<span class="singleSelectedDomain" style="display:none"> domain selected</span>
+									</a>
+									<span class="maxCartReached" style="display:none"> (Max. reached <span class="popupBalloon balloonDown borderRadius borderRadius"><i class="fa fa-question-circle"></i><p>Maximum amount reached <a href="https://www.freenom.com/en/resellers.html" target="_blank">Become a reseller</a></p></span>)</span>
+							</span>
+					</div>
+
+					<table class="resultTable borderRadius" id = "top_domain">
+						<tr>
+							<td rowspan="2">
+								<div class="domainName" id="dname"></div>
+								<div class="domainLabel costPrice" style="display:none;">Cost price</div>
+								<div class="domainLabel forFree" style="display:none;">Free</div>
+								<div class="domainLabel specialDomain" style="display:none;">Special domain <span class="popupBalloon balloonUp"><i class="fa fa-question-circle"></i><p>Special domain popup</span></div>
+								<div class="domainExtension" id="dtld"></div>
+							</td>
+							<td class="lastColumn priceTable">
+								<div class="currency" id="dcurrency"></div>
+								<div class="domainPrice" id="dprice_int"><span id="dprice_cent" class="cents"></span></div>
+							</td>
+							</tr>
+							<tr>
+							<td class="lastColumn submitTable">
+								<a class="addTopToCart" id="top_domain_get_it_text" style="display: none;"></a>
+								<a class="checkingTopToCart" style="display: none;"><i class="fa fa-spinner fa-spin"></i>Checking</a>
+															<!-- showed by default -->
+								<a class="addedToCart"><i class="fa fa-check"></i>Selected</a>
+								<a class="removeSmall"><i class="fa fa-minus-circle"></i></a>
+
+								<a class="topNotAvailable" style="display: none;"><i class="fa fa-times"></i>Not available</a>
+							</td>
+						</tr>
+					</table>
+
+				</div>
+			</div>
+		</div>
+
+			<input type="hidden" id="top_domain_get_it_free_text" value="Get it for free!" />
+			<input type="hidden" id="top_domain_get_it_now_text" value="Get it now!"  />
+
+
+		<div class="domainResult container thirdSection otherCostPriceDomains">
+			<div class="row margin padding centered">
+				<div class="col-md-12 domainRegister text-center">
+						<h3><strong>Cost Price Domains</strong> cannot be found cheaper elsewhere!</h3>
+					<table class="resultTable borderRadius">
+						<thead class="filter" id="paid_domains">
+							<tr>
+								<th colspan="2">
+									<div class="slideMaxCharacters">
+										<span>Max. characters</span>
+										<div id="slider"></div>
+										<span class="range" id="max_chars">20</span>
+									</div>
+									<div class="locations">
+										<input id="locations" type="checkbox">
+										<label for="locations">Locations</label>
+									</div>
+								</th>
+							</tr>
+						</thead>
+					<!-- BEGIN FOR EACH -->
+					<!-- END FOR EACH -->
+								<!-- <div class="domainPrice">6.<span class="cents">78</span></div> -->
+
+					</table>
+				</div>
+			</div>
+
+			<script id="paiddomain_tmpl" type="text/x-jsrender">
+				<tr class="paid_rows" location="{{:location}}" style="display: none;">
+					<td class="firstColumn">
+						<div class="domainName">{{:domain}}</span></div>
+                        {{if status == "AVAILABLE"}}
+                            {{if type != "SPECIAL"}}<div class="domainLabel costPrice">Cost Price</div> {{/if}}
+                            {{if type == "SPECIAL"}}<div class="domainLabel specialDomain" style="display:block;">Special domain <span class="popupBalloon balloonUp"><i class="fa fa-question-circle"></i><p>Special domain popup</span></div> {{/if}}
+                        {{/if}}
+						<div class="domainExtension">{{:tld}}</div>
+					</td>
+					<td class="lastColumn priceTable">
+                        {{if status == "AVAILABLE"}}
+                            <div class="currency">{{:currency}}</div>
+                            <div class="domainPrice">{{:price_int}}.<span class="cents">{{:price_cent}}</span></div>
+
+                            <!-- ADD TO CART BTN -->
+                            <a class="addSelect borderRadius" {{if is_in_cart==0}} style="display: block;" {{else}} style="display:none;" {{/if}} >Select</a>
+
+                            <!-- LOADING BTN -->
+                            <a class="addLoading borderRadius" style="display: none;"><i class="fa fa-spinner fa-spin"></i>Checking</a>
+
+                            <!-- REMOVE FROM CART BTN -->
+                            <a class="removeSelected borderRadius" {{if is_in_cart==0}} style="display: none;" {{else}} style="display:block;"{{/if}} ><i class="fa fa-minus-circle"></i></a>
+                            <a class="addSelected borderRadius" {{if is_in_cart==0}} style="display: none;" {{else}} style="display:block;"{{/if}}><i class="fa fa-check"></i>Selected</a>
+
+                            <!-- NOT AVAILABLE BTN -->
+                            <a class="notAvailable borderRadius" style="display: none;"><i class="fa fa-times"></i>&nbsp;Not available</a>
+                        {{else}}
+                            <!-- NOT AVAILABLE BTN -->
+                            <a class="notAvailable borderRadius" style="display: block;"><i class="fa fa-times"></i>&nbsp;Not available</a>
+                        {{/if}}
+					</td>
+				</tr>
+			</script>
+		</div>8
+
+		<section class="container bottomCart paginate">
+			<div class="row margin centered">
+				<div class="col-md-8 pagination text-center">
+							<span>Showing results 1 / <span id="countResults">20</span></span>
+							<a href="javascript:;" id="showAllResults">Show all</a>
+							<br/><br/>
+							<a href="javascript:;" id="showMoreResults">Show more&nbsp;&nbsp;<i class="fa fa-angle-down"></i></a>
+					</div>
+					<div class="col-md-4 domainRegister textCenter" style="margin-top: 0;">
+						<a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=en" class="addToCart borderRadius">Checkout</a>
+						<span class="selectedDomains">
+								<a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=en">
+								<span class="nrSelectedDomains">0</span>
+								<span class="multipleSelectedDomains"> domains selected</span>
+								<span class="singleSelectedDomain" style="display:none"> domain selected</span>
+								</a>
+									<span class="maxCartReached" style="display:none"> (Max. reached <span class="popupBalloon balloonDown borderRadius borderRadius"><i class="fa fa-question-circle"></i><p>Maximum amount reached <a href="https://www.freenom.com/en/resellers.html" target="_blank">Become a reseller</a></p></span>)</span>
+						</span>
+						<!-- </h3> -->
+					</div>
+				</div>
+		</section>
+
+	</div><!-- END RESULTS -->
+
+<div class="container footer">
+	<div class="row">
+		<div class="col-md-3">
+			<ul>
+				<li>
+					<a href="/services.html" title="Services">Services</a>
+					<ul>
+						<li>
+							<a href="" title="">Register a new domain</a>
+						</li>
+						<li>
+							<a href="" title="">Domain price chart</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="col-md-3">
+			<ul>
+				<li>
+					<a href="/partners.html" title="Partners">Partners</a>
+					<ul>
+						<li>
+							<a href="" title="">Resellers</a>
+						</li>
+						<li>
+							<a href="" title="">IP Agencies</a>
+						</li>
+						<li>
+							<a href="" title="">Developers</a>
+						</li>
+						<li>
+							<a href="" title="">Anti-abuse API</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="col-md-3">
+			<ul>
+				<li>
+					<a href="/about.html" title="About Bitsafe Domains">About Bitsafe Domains</a>
+					<ul>
+						<li>
+							<a href="" title="">Company</a>
+						</li>
+						<li>
+							<a href="" title="">Terms and conditions</a>
+						</li>
+						<li>
+							<a href="" title="">Press</a>
+						</li>
+						<li>
+							<a href="" title="">Jobs</a>
+						</li>
+						<li>
+							<a href="" title="">Contact</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="col-md-3">
+			<ul>
+				<li>
+					<a href="/support.html" title="Support">Support</a>
+					<ul>
+						<li>
+							<a href="" title="">Knowledgebase</a>
+						</li>
+						<li>
+							<a href="" title="">Report abuse</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="subfooter">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				All rights reserved - &copy; 2018 Bitsafedomains - Netherlands
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head profile="https://www.w3.org/1999/xhtml/vocab">
+    <title> | BitSafe</title>
+    <meta name="description" content="BitSafe is a leading Internet Payment Service Provider (IPSP) that has been enabling high-risk webmasters with building their online businesses since 1998." />
+    <meta name="viewport" content="width=device-width  initial-scale=1.0">
+    <meta property="og:title" content="Homepage - Putting Trust in Global Payments"/>
+    <meta property="og:description" content="BitSafe is a leading Internet Payment Service Provider (IPSP) that has been enabling high-risk webmasters with building their online businesses since 1998."/>
+    <meta property="og:image" content="../images.v2/logo.png"/>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300 400 600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+
+        <script type="text/javascript" src="https://dev.my.bitsafe.domains/assets/js/jsrender.min.js"></script>
+<!--        <script type="text/javascript" src="https://dev.my.bitsafe.domains/includes/domains/fn-available-js.php"></script> -->
+<!--        <script type="text/javascript" src="https://register.freenom.com/js/login.js"></script> -->
+<!--        <script type="text/javascript" src="https://dev.my.bitsafe.domains/includes/jscript/loggedon.php"></script> -->
+
+        <script>
+        $(function() {
+            var $currentUrl = document.URL;
+            var $urlParts   = $currentUrl.split('=');
+            var $domain     = ($urlParts.length > 1) ? $urlParts[1] : '';
+
+            if ( $domain != '' && 
+                /^[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]?(?:\.[a-zA-Z]{2,})+$/.test($domain)) {
+                $(".firstCheck").hide();
+                $("#domainForm2 #idn").val($domain);
+                $(".domainResult.zeroSection").hide();
+                $(".domainResult.firstSection").hide();
+                $(".allResults").show();
+
+                // AJAX
+                $.ajax({ 
+                    url: "https://dev.my.bitsafe.domains/includes/whois/lookup.php", 
+                    type: 'get', 
+                    data: { d: $domain },
+                    crossDomain: true, 
+                    error: function() { 
+                        $(".dname").text($domain);
+                        $(".domainResult.zeroSection").show();
+                    }, 
+                    success: function($data) {
+                        $("#whois_output").text($data.output);
+                        $(".domainResult.firstSection").show();
+                    }
+                });
+
+            } else if ($domain != '') {
+                $(".firstCheck").hide();
+                $("#domainForm2 #idn").val($domain);
+                $(".domainResult.zeroSection").hide();
+                $(".domainResult.firstSection").hide();
+                $(".allResults").show();
+                $(".dname").text($domain);
+                $(".domainResult.zeroSection").show();
+            }
+
+
+            $("#domainForm #submitBtn").click(function() {
+                var $val = $("#domainForm #idn").val();
+
+                var $currentUrl = document.URL;
+                var $urlParts   = $currentUrl.split('=');
+                if ($urlParts.length > 1) {
+                    window.location = $urlParts[0] + "=" + $val;
+                } else {
+                    window.location = $urlParts[0] + "?d=" + $val;
+                }
+            });
+
+            $("#domainForm2 #submitBtn").click(function() {
+                var $val = $("#domainForm2 #idn").val();
+
+                var $currentUrl = document.URL;
+
+                if ($currentUrl.indexOf("=") > -1) {
+                    var $urlParts   = $currentUrl.split('=');
+                    window.location = $urlParts[0] + "=" + $val;
+                } else {
+                    window.location = $currentUrl + "?d=" + $val;
+                }
+            });
+        });
+        </script>
+
+</head>
+<body class="html home" id="bs-override">
+    <nav class="row header justify-content-md-center">
+		<a class="logo col-md-4">
+			<img class="logo__img" src="../images.v2/logo-bitsafe.png" />
+		</a>
+		<ul class="menu col-md-8">
+			<li class="menu-item">
+				<a class="menu-link" href="/services.html" title="Services">Services</a>
+				<ul class="submenu">
+					<li class="submenu-item">
+						<a class="submenu-link" href="" title="">Register a new domain</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link" href="" title="">Domain price chart</a>
+					</li>
+				</ul>
+			</li>
+			<li class="menu-item">
+				<a class="menu-link" href="/partners.html" title="Partners">Partners</a>
+				<ul class="submenu">
+					<li class="submenu-item">
+						<a class="submenu-link" href="" title="">Resellers</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link" href="" title="">IP Agencies</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link" href="" title="">Developers</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link" href="" title="">Anti-abuse API</a>
+					</li>
+				</ul>
+			</li>
+			<li class="menu-item">
+				<a class="menu-link" href="/about.html" title="About Bitsafe Domains">About Bitsafe Domains</a>
+				<ul class="submenu">
+					<li class="submenu-item">
+						<a class="submenu-link" href="" title="">Company</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link" href="" title="">Terms and conditions</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link" href="" title="">Press</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link" href="" title="">Jobs</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link" href="" title="">Contact</a>
+					</li>
+				</ul>
+			</li>
+			<li class="menu-item">
+				<a class="menu-link" href="/support.html" title="Support">Support</a>
+				<ul class="submenu">
+					<li class="submenu-item">
+						<a class="submenu-link" href="" title="">Knowledgebase</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link" href="" title="">Report abuse</a>
+					</li>
+				</ul>
+			</li>
+			<li class="menu-item signin">
+				<a class="menu-link" href="" title="Support">Sign in</a>
+			</li>
+			<li class="menu-item languages">
+				<a class="menu-link" href="">EN</a>
+				<ul class="submenu">
+					<li class="submenu-item">
+						<a class="submenu-link" href="/nl/" title="">Nederlands</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link" href="/en/" title="">Deutsch</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+    <!-- FIRST CHECK -->
+    <div class="hero">
+        <div class="container domainCheck firstCheck">
+            <div class="face"></div>
+            <div class="row justify-content-md-center">
+                <div class="col-md-7 title text-center">
+                    <h1>WHOIS</h1>
+                </div>
+                <div class="col-md-7 search-wrapper">
+                    <form method="get" class="searchform" id="domainForm">
+                        <input type="text" id="idn" placeholder="Look up any domain" name="domainname" />
+                        <a class="button" id="submitBtn">Search</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="allResults">
+
+        <!-- CHECK AGAIN -->
+        <div class="second-search">
+            <div class="container domainCheck domainResults">
+                <div class="row justify-content-md-center">
+                    <div class="col-md-7 search-wrapper">
+                        <form method="get" class="searchform" id="domainForm">
+                            <input type="text" id="idn" placeholder="Look up any domain" name="domainname" />
+                            <a class="button" id="submitBtn">Search</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wave wave--blue"></div>
+
+        <div class="container domainResult zeroSection">
+            <div class="row margin padding centered">
+                <div class="col-md-12 domainRegister textCenter text-center" style="text-align: center;padding-top: 40px;">
+                
+                    <!-- ALERTS FOR DOMAINSTATUS -->
+                    <h2 class="alert">
+                        Sorry,
+                    </h2>
+                    <h3 class="dname"></h3>
+                    <h3 class="alert"> 
+                        is not a valid domain name.
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="container domainResult firstSection" style="position: relative">
+            <div class="row margin padding centered">
+                <div class="col-md-12 domainRegister textCenter">
+                    <div style="width: 100%; max-width: 800px; display: table; margin: 20px auto 40px; padding: 30px 40px; border-radius: 5px" class="output"><h1>WHOIS Lookup domain information</h1> <pre id="whois_output"></pre></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- END RESULTS -->
+
+<div class="container footer">
+    <div class="row">
+        <div class="col-md-3">
+            <ul>
+                <li>
+                    <a href="/services.html" title="Services">Services</a>
+                    <ul>
+                        <li>
+                            <a href="" title="">Register a new domain</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Domain price chart</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <ul>
+                <li>
+                    <a href="/partners.html" title="Partners">Partners</a>
+                    <ul>
+                        <li>
+                            <a href="" title="">Resellers</a>
+                        </li>
+                        <li>
+                            <a href="" title="">IP Agencies</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Developers</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Anti-abuse API</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <ul>
+                <li>
+                    <a href="/about.html" title="About Bitsafe Domains">About Bitsafe Domains</a>
+                    <ul>
+                        <li>
+                            <a href="" title="">Company</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Terms and conditions</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Press</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Jobs</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Contact</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <ul>
+                <li>
+                    <a href="/support.html" title="Support">Support</a>
+                    <ul>
+                        <li>
+                            <a href="" title="">Knowledgebase</a>
+                        </li>
+                        <li>
+                            <a href="" title="">Report abuse</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="subfooter">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                All rights reserved - &copy; 2018 Bitsafedomains - Netherlands
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
