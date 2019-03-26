@@ -50,6 +50,15 @@ h4 {
 
 .heading {
 	color: #000;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+	.heading {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
 }
 
 .heading--white {
@@ -648,6 +657,7 @@ body.content {
 	justify-content: center;
 	align-items: center;
 	width: 40px;
+	min-width: 40px;
 	height: 40px;
 	background: #fff;
 	font-size: 18px;
@@ -695,6 +705,11 @@ body.content {
 	background: #00afef;
 }
 
+.row {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
 .image {
 	width: 100%;
 	max-width: 100%;
@@ -710,7 +725,13 @@ body.content {
 	width: 200px;
 	min-height: 120px;
 	position: relative;
-	margin: 0 auto 20px;
+	margin: 80px auto 20px;
+}
+
+@media screen and (min-width: 768px) {
+	.image__wrapper {
+		margin-top: 0;
+	}
 }
 
 .icon__background {
@@ -723,11 +744,21 @@ body.content {
 	font-size: 16px;
 	line-height: 1.8;
 	color: #000;
-	margin-bottom: 10px;
+	margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+	.paragraph {
+		margin-bottom: 10px;
+	}
 }
 
 .paragraph--white {
 	color: #fff;
+}
+
+.paragraph--blue {
+	color: #00afef;
 }
 
 /* HOME */
