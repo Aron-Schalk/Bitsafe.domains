@@ -650,6 +650,7 @@ body.content {
 .list__text {
 	display: flex;
 	align-items: center;
+	color: #000;
 }
 
 .list__text--top {
@@ -739,6 +740,10 @@ body.content {
 	margin-right: auto;
 	margin-left: auto;
 	padding: 0 20px;
+}
+
+.image__background--small {
+	width: 75%;
 }
 
 .image__background--blue {
@@ -1057,6 +1062,10 @@ body.content {
 
 .text-center {
 	text-align: center;
+}
+
+.text--white {
+	color: #fff;
 }
 
 /* ALERT */
