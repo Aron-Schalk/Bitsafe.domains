@@ -98,85 +98,231 @@
 
 </head>
 <body class="html home" id="bs-override">
-    <nav class="row header justify-content-md-center">
-		<a class="logo col-md-4">
-			<img class="logo__img" src="../images.v2/logo-bitsafe.png" />
+    
+   <!-- NAVIGATION BEGIN -->
+	<nav class="navbar">
+		<a class="logo">
+			<img src="../images.v2/logo-bitsafe.png" class="logo__img" alt="Bitsafe logo" />
 		</a>
-		<ul class="menu col-md-8">
-			<li class="menu-item">
-				<a class="menu-link" href="/services.html" title="Services">Services</a>
+		<ul class="menu">
+			<li class="menu__item">
+				<a class="menu-link">
+					Services
+					<i class="fa fa-angle-down arrow"></i>
+				</a>
 				<ul class="submenu">
 					<li class="submenu-item">
-						<a class="submenu-link" href="" title="">Register a new domain</a>
+						<a class="submenu-link" href="/index.html">Register a new domain</a>
 					</li>
 					<li class="submenu-item">
-						<a class="submenu-link" href="" title="">Domain price chart</a>
+						<a class="submenu-link" href="/pricechart.html">Domain price chart</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link" href="/whois.html">WHOIS</a>
 					</li>
 				</ul>
 			</li>
-			<li class="menu-item">
-				<a class="menu-link" href="/partners.html" title="Partners">Partners</a>
+			<li class="menu__item">
+				<a class="menu-link">
+					Partners
+					<i class="fa fa-angle-down arrow"></i>
+				</a>
 				<ul class="submenu">
 					<li class="submenu-item">
-						<a class="submenu-link" href="" title="">Resellers</a>
+						<a class="submenu-link" href="/resellers.html">Resellers</a>
 					</li>
 					<li class="submenu-item">
-						<a class="submenu-link" href="" title="">IP Agencies</a>
+						<a class="submenu-link" href="/ipagencies.html">IP Agencies</a>
 					</li>
 					<li class="submenu-item">
-						<a class="submenu-link" href="" title="">Developers</a>
+						<a class="submenu-link" href="/developers.html">Developers</a>
 					</li>
 					<li class="submenu-item">
-						<a class="submenu-link" href="" title="">Anti-abuse API</a>
+						<a class="submenu-link" href="/antiabuse_api.html">Anti-abuse API</a>
 					</li>
 				</ul>
 			</li>
-			<li class="menu-item">
-				<a class="menu-link" href="/about.html" title="About Bitsafe Domains">About Bitsafe Domains</a>
+			<li class="menu__item">
+				<a class="menu-link">
+					About
+					<i class="fa fa-angle-down arrow"></i>
+				</a>
 				<ul class="submenu">
 					<li class="submenu-item">
-						<a class="submenu-link" href="company.html" title="">Company</a>
+						<a class="submenu-link" href="/company.html" title="">Company</a>
 					</li>
 					<li class="submenu-item">
-<a class="submenu-link" href="termsandconditions.html" title="">Terms and conditions</a>					</li>
-					<li class="submenu-item">
-						<a class="submenu-link" href="" title="">Press</a>
+						<a class="submenu-link" href="/termsandconditions.html" title="">Terms and conditions</a>
 					</li>
 					<li class="submenu-item">
-						<a class="submenu-link" href="" title="">Jobs</a>
+						<a class="submenu-link" href="/press.html" title="">Press</a>
 					</li>
 					<li class="submenu-item">
-						<a class="submenu-link" href="" title="">Contact</a>
+						<a class="submenu-link" href="/jobs.html" title="">Jobs</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link" href="/contact.html" title="">Contact</a>
 					</li>
 				</ul>
 			</li>
-			<li class="menu-item">
-				<a class="menu-link" href="/support.html" title="Support">Support</a>
+			<li class="menu__item">
+				<a class="menu-link">
+					Support
+					<i class="fa fa-angle-down arrow"></i>
+				</a>
 				<ul class="submenu">
 					<li class="submenu-item">
-						<a class="submenu-link" href="" title="">Knowledgebase</a>
+						<a class="submenu-link" href="/knowledgebase.html" title="">Knowledgebase</a>
 					</li>
 					<li class="submenu-item">
-						<a class="submenu-link" href="" title="">Report abuse</a>
+						<a class="submenu-link" href="/reportabuse.html" title="">Report abuse</a>
 					</li>
 				</ul>
 			</li>
-			<li class="menu-item signin">
-				<a class="menu-link" href="" title="Support">Sign in</a>
+			<li class="menu__item signin--icon">
+				<a class="menu-link">
+					<i class="fa fa-user"></i>
+				</a>
 			</li>
-			<li class="menu-item languages">
-				<a class="menu-link" href="">EN</a>
-				<ul class="submenu">
+			<li class="menu__item signin">
+				<a class="menu-link button button--small button--ghost">
+					Sign in
+				</a>
+			</li>
+			<li class="menu__item languages--button">
+				<a class="menu-link">
+					EN
+					<i class="fa fa-angle-down arrow"></i>
+				</a>
+				<ul class="submenu languagelist" id="language-list-1">
 					<li class="submenu-item">
-						<a class="submenu-link" href="/nl/" title="">Nederlands</a>
+						<a class="submenu-link lang-en" href="/en/index.html">English</a>
 					</li>
 					<li class="submenu-item">
-						<a class="submenu-link" href="/en/" title="">Deutsch</a>
+						<a class="submenu-link lang-ru" href="/ru/index.html">Русский</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-zh" href="/zh/index.html">简体字</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-es" href="/es/index.html">Español</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-th" href="/th/index.html">ไทย</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-id" href="/id/index.html">Bahasa Indonesia</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-fr" href="/fr/index.html">Français</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-vi" href="/vi/index.html">Tiếng Việt</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-pt" href="/pt/index.html">Português</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-tr" href="/tr/index.html">Türkçe</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-de" href="/de/index.html">Deutsch</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-ar" href="/ar/index.html">ﺎﻠﻋﺮﺒﻳﺓ</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-zu" href="/zu/index.html">繁體字</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-hi" href="/hi/index.html">हिन्दू</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-ro" href="/ro/index.html">Romana</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-nl" href="/nl/index.html">Nederlands</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-it" href="/it/index.html">Italiano</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-ja" href="/ja/index.html">日本語</a>
+					</li>
+				</ul>
+			</li>
+			<li class="menu__item languages">
+				<a class="menu-link">
+					English
+					<i class="fa fa-angle-down arrow"></i>
+				</a>
+				<ul class="submenu languagelist" id="language-list-2">
+					<li class="submenu-item">
+						<a class="submenu-link lang-en" href="/en/index.html">English</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-ru" href="/ru/index.html">Русский</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-zh" href="/zh/index.html">简体字</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-es" href="/es/index.html">Español</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-th" href="/th/index.html">ไทย</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-id" href="/id/index.html">Bahasa Indonesia</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-fr" href="/fr/index.html">Français</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-vi" href="/vi/index.html">Tiếng Việt</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-pt" href="/pt/index.html">Português</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-tr" href="/tr/index.html">Türkçe</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-de" href="/de/index.html">Deutsch</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-ar" href="/ar/index.html">ﺎﻠﻋﺮﺒﻳﺓ</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-zu" href="/zu/index.html">繁體字</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-hi" href="/hi/index.html">हिन्दू</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-ro" href="/ro/index.html">Romana</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-nl" href="/nl/index.html">Nederlands</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-it" href="/it/index.html">Italiano</a>
+					</li>
+					<li class="submenu-item">
+						<a class="submenu-link lang-ja" href="/ja/index.html">日本語</a>
 					</li>
 				</ul>
 			</li>
 		</ul>
+
+		<button class="hamburger">
+			<div class="hamburger__bar hamburger__bar--top"></div>
+			<div class="hamburger__bar hamburger__bar--middle"></div>
+			<div class="hamburger__bar hamburger__bar--bottom"></div>
+		</button>
 	</nav>
+
+	<!-- NAVIGATION END -->
 
     <!-- FIRST CHECK -->
     <div class="hero">
@@ -243,96 +389,88 @@
 
     <!-- END RESULTS -->
 
-<div class="container footer">
-    <div class="row">
-        <div class="col-md-3">
-            <ul>
-                <li>
-                    <a href="/services.html" title="Services">Services</a>
-                    <ul>
-                        <li>
-                            <a href="" title="">Register a new domain</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Domain price chart</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-3">
-            <ul>
-                <li>
-                    <a href="/partners.html" title="Partners">Partners</a>
-                    <ul>
-                        <li>
-                            <a href="" title="">Resellers</a>
-                        </li>
-                        <li>
-                            <a href="" title="">IP Agencies</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Developers</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Anti-abuse API</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-3">
-            <ul>
-                <li>
-                    <a href="/about.html" title="About Bitsafe Domains">About Bitsafe Domains</a>
-                    <ul>
-                        <li>
-                            <a href="" title="">Company</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Terms and conditions</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Press</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Jobs</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Contact</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div class="col-md-3">
-            <ul>
-                <li>
-                    <a href="/support.html" title="Support">Support</a>
-                    <ul>
-                        <li>
-                            <a href="" title="">Knowledgebase</a>
-                        </li>
-                        <li>
-                            <a href="" title="">Report abuse</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<div class="subfooter">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                All rights reserved - &copy; 2018 Bitsafedomains - Netherlands
-            </div>
-        </div>
-    </div>
-</div>
+	<!-- FOOTER BEGIN -->
+	<div class="container footer">
+		<div class="row">
+			<div class="col-md-3 footer__column">
+				<ul class="footer__list">
+					<li class="footer__item footer__header">
+						<a title="Services">Services</a>
+					</li>
+					<li class="footer__item">
+						<a class="footer__link" href="/index.html" title="">Register a new domain</a>
+					</li>
+					<li class="footer__item">
+						<a class="footer__link" href="/pricechart.html" title="">Domain price chart</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-3 footer__column">
+				<ul class="footer__list">
+					<li class="footer__item footer__header">
+						<a title="Partners">Partners</a>
+					</li>
+					<li class="footer__item">
+						<a class="footer__link" href="/resellers.html" title="">Resellers</a>
+					</li>
+					<li class="footer__item">
+						<a class="footer__link" href="/ipagencies.html" title="">IP Agencies</a>
+					</li>
+					<li class="footer__item">
+						<a class="footer__link" href="/developers.html" title="">Developers</a>
+					</li>
+					<li class="footer__item">
+						<a class="footer__link" href="/antiabuse_api.html" title="">Anti-abuse API</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-3 footer__column">
+				<ul class="footer__list">
+					<li class="footer__item footer__header">
+						<a title="About Bitsafe Domains">About Bitsafe Domains</a>						
+					</li>
+					<li class="footer__item">
+						<a class="footer__link" href="/company.html" title="">Company</a>
+					</li>
+					<li class="footer__item">
+						<a class="footer__link" href="/termsandconditions.html" title="">Terms and conditions</a>
+					</li>
+					<li class="footer__item">
+						<a class="footer__link" href="/press.html" title="">Press</a>
+					</li>
+					<li class="footer__item">
+						<a class="footer__link" href="/jobs.html" title="">Jobs</a>
+					</li>
+					<li class="footer__item">
+						<a class="footer__link" href="/contact.html" title="">Contact</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-3 footer__column">
+				<ul class="footer__list">
+					<li class="footer__item footer__header">
+						<a title="Support">Support</a>
+					</li>
+					<li class="footer__item">
+						<a class="footer__link" href="/knowledgebase.html" title="">Knowledgebase</a>
+					</li>
+					<li class="footer__item">
+						<a class="footer__link" href="/reportabuse.html" title="">Report abuse</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="subfooter">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					All rights reserved - &copy; 2018 Bitsafedomains - Netherlands
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- FOOTER END -->
 
 </body>
 </html>
-
