@@ -1083,6 +1083,10 @@ body.content {
 	color: #fff;
 }
 
+.text--bold {
+	font-weight: bold;
+}
+
 /* ALERT */
 
 .alert, .succes {
