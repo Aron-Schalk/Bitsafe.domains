@@ -283,9 +283,9 @@
 	<div class="second-search">
             <div class="container domainCheck domainResults">
                 <div class="row justify-content-md-center">
-                    <div class="col-md-7 search-wrapper">
-                        <form method="get" class="searchform" id="domainForm">
-                            <input type="text" id="idn" placeholder="Register your domain" name="domainname" />
+                    <div class="col-md-7 search__wrapper">
+                        <form method="get" class="search" id="domainForm">
+                            <input type="text" class="search__field" id="idn" placeholder="Register your domain" name="domainname" />
                             <a class="button" id="submitBtn">Check</a>
                         </form>
                     </div>
@@ -293,7 +293,7 @@
             </div>
 		</div>
 		
-		<div class="wave wave--blue"></div>
+		<div class="wave"></div>
 
 <input type="hidden" id="top_domain_get_it_free_text" value="Get it for Free!" />
 <input type="hidden" id="top_domain_get_it_now_text" value="Get it now"  />
@@ -311,16 +311,16 @@
 	<!-- <div class="domainCheck domainResults transparentBackground ">
 		<div class="row margin centered ">
 			
-			<div class="col-md-7 search-wrapper">
-				<form method="get" class="searchform" id="domainForm">
-					<input type="text" id="idn" placeholder="Register your domain" name="domainname" />
-					<a class="button" id="submitBtn">Search</a>
+			<div class="col-md-7 search__wrapper">
+				<form method="get" class="search" id="domainForm">
+					<input type="text" class="search__field" id="idn" placeholder="Register your domain" name="domainname" />
+					<a class="search__button button button--inverse" id="submitBtn">Search</a>
 				</form>
 			</div>
 			
 			<div class="span8 borderRadius noFloat inputFields noOverflow">
-				<form method="get" class="searchform" id="domainForm2">
-					<input type="text" id="idn" value="Find a new FREE domain" name="domainname" placeholder=""/>
+				<form method="get" class="search" id="domainForm2">
+					<input type="text" class="search__field" id="idn" value="Find a new FREE domain" name="domainname" placeholder=""/>
 					<a id="submitBtn">Check Availability</a>
 				</form>
 			</div>
@@ -420,23 +420,23 @@
 		<div class="second-search">
             <div class="container domainCheck domainResults">
                 <div class="row justify-content-md-center">
-                    <div class="col-md-7 search-wrapper">
-                        <form method="get" class="searchform" id="domainForm">
-                            <input type="text" id="idn" placeholder="Look up any domain" name="domainname" />
-                            <a class="button" id="submitBtn">Search</a>
+                    <div class="col-md-7 search__wrapper">
+                        <form method="get" class="search" id="domainForm">
+                            <input type="text" class="search__field" id="idn" placeholder="Look up any domain" name="domainname" />
+                            <a class="search__button button button--inverse" id="submitBtn">Search</a>
                         </form>
                     </div>
                 </div>
             </div>
 		</div>
 		
-		<div class="wave wave--blue"></div>
+		<div class="wave"></div>
 
         <div class="container domainResult zeroSection">
             <div class="row margin padding centered">
                 <div class="col-md-12 domainRegister textCenter">
                     <!-- ALERTS FOR DOMAINSTATUS -->
-                    <h2 class="alert">Sorry, <strong class="dname"></span></strong> is an invalid domain name.
+                    <h2 class="alert">Sorry, <strong class="domainname"></span></strong> is an invalid domain name.
                         <a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=english" class="addToCart borderRadius">Checkout</a>
                         <span class="selectedDomains">
                             <a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=english"><span class="nrSelectedDomains">0</span> 
@@ -455,7 +455,7 @@
 				<div class="col-md-12 domainRegister textCenter">
 
 					<!-- ALERTS FOR DOMAINSTATUS -->
-					<div class="succes">Yes <strong class="dname"></strong> is available!
+					<div class="succes">Yes <strong class="domainname"></strong> is available!
 							<a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=en" class="addToCart borderRadius">Checkout</a>
 							<span class="selectedDomains">
 									<a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=en">
@@ -467,7 +467,7 @@
 							</span>
 					</div>
 
-					<div class="alert">Sorry, <strong class="dname"></span></strong> is not available.
+					<div class="alert">Sorry, <strong class="domainname"></span></strong> is not available.
 							<a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=en" class="addToCart borderRadius">Checkout</a>
 							<span class="selectedDomains">
 									<a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=en">
@@ -493,7 +493,7 @@
 					<table class="resultTable borderRadius" id = "top_domain">
 						<tr>
 							<td rowspan="2">
-								<div class="domainName" id="dname"></div>
+								<div class="domainName" id="domainname"></div>
 								<div class="domainLabel costPrice" style="display:none;">Cost price</div>
 								<div class="domainLabel forFree" style="display:none;">Free</div>
 								<div class="domainLabel specialDomain" style="display:none;">Special domain <span class="popupBalloon balloonUp"><i class="fa fa-question-circle"></i><p>Special domain popup</span></div>

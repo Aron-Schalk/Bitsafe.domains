@@ -49,7 +49,7 @@
                     data: { d: $domain },
                     crossDomain: true, 
                     error: function() { 
-                        $(".dname").text($domain);
+                        $(".domainname").text($domain);
                         $(".domainResult.zeroSection").show();
                     }, 
                     success: function($data) {
@@ -64,7 +64,7 @@
                 $(".domainResult.zeroSection").hide();
                 $(".domainResult.firstSection").hide();
                 $(".allResults").show();
-                $(".dname").text($domain);
+                $(".domainname").text($domain);
                 $(".domainResult.zeroSection").show();
             }
 
@@ -330,12 +330,14 @@
             <div class="face"></div>
             <div class="row justify-content-md-center">
                 <div class="col-md-7 title text-center">
-                    <h1>WHOIS</h1>
+                    <h1 class="heading text-white">
+						WHOIS
+					</h1>
                 </div>
-                <div class="col-md-7 search-wrapper">
-                    <form method="get" class="searchform" id="domainForm">
-                        <input type="text" id="idn" placeholder="Look up any domain" name="domainname" />
-                        <a class="button" id="submitBtn">Search</a>
+                <div class="col-md-7 search__wrapper">
+                    <form method="get" class="search" id="domainForm">
+                        <input type="text" class="search__field" id="idn" placeholder="Look up any domain" name="domainname" />
+                        <a class="search__button button button--inverse" id="submitBtn">Search</a>
                     </form>
                 </div>
             </div>
@@ -349,17 +351,17 @@
         <div class="second-search">
             <div class="container domainCheck domainResults">
                 <div class="row justify-content-md-center">
-                    <div class="col-md-7 search-wrapper">
-                        <form method="get" class="searchform" id="domainForm">
-                            <input type="text" id="idn" placeholder="Look up any domain" name="domainname" />
-                            <a class="button" id="submitBtn">Search</a>
+                    <div class="col-md-7 search__wrapper">
+                        <form method="get" class="search" id="domainForm">
+                            <input type="text" class="search__field" id="idn" placeholder="Look up any domain" name="domainname" />
+                            <a class="search__button button button--inverse" id="submitBtn">Search</a>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="wave wave--blue"></div>
+        <div class="wave"></div>
 
         <div class="container domainResult zeroSection">
             <div class="row margin padding centered">
@@ -369,7 +371,7 @@
                     <h2 class="alert">
                         Sorry,
                     </h2>
-                    <h3 class="dname"></h3>
+                    <h3 class="domainname"></h3>
                     <h3 class="alert"> 
                         is not a valid domain name.
                     </h3>

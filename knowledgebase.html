@@ -270,13 +270,16 @@
 			<div class="face"></div>
 			<div class="row justify-content-md-center">
 				<div class="col-md-7 title text-center">
-					<h1>Bitsafe the reliable billing solution <br />
-						for your online services.</h1>
+					<h1 class="heading text-white">
+						Bitsafe the reliable billing solution
+						<br>
+						for your online services.
+					</h1>
 				</div>
-				<div class="col-md-7 search-wrapper">
-						<form method="get" class="searchform" id="domainForm">
-						    <input type="text" id="idn" placeholder="Register your new domain" name="domainname" />
-						    <a class="button" id="submitBtn">Search</a>
+				<div class="col-md-7 search__wrapper">
+						<form method="get" class="search" id="domainForm">
+						    <input type="text" class="search__field" id="idn" placeholder="Register your new domain" name="domainname" />
+						    <a class="search__button button button--inverse" id="submitBtn">Search</a>
 						</form>
 				</div>
 			</div>
@@ -290,16 +293,16 @@
 		<div class="second-search">
             <div class="container domainCheck domainResults">
                 <div class="row justify-content-md-center">
-                    <div class="col-md-7 search-wrapper">
-                        <form method="get" class="searchform" id="domainForm">
-                            <input type="text" id="idn" placeholder="Register your new domain" name="domainname" />
-                            <a class="button" id="submitBtn">Search</a>
+                    <div class="col-lg-8 search__wrapper">
+                        <form method="get" class="search" id="domainForm">
+                            <input type="text" class="search__field" id="idn" placeholder="Register your new domain" name="domainname" />
+                            <a class="search__button button button--inverse" id="submitBtn">Search</a>
                         </form>
                     </div>
                 </div>
             </div>
 		</div>
-		<div class="wave wave--blue"></div>
+		<div class="wave"></div>
 		<!-- CHECK AGAIN END -->
 
 		<!-- INVALID BEGIN -->
@@ -307,7 +310,7 @@
             <div class="row margin padding centered">
                 <div class="col-md-12 domainRegister textCenter">
                     <div class="alert text-center">
-						Sorry, <strong class="dname"></span></strong> is an invalid domain name.
+						Sorry, <strong class="domainname"></span></strong> is an invalid domain name.
 						<h4 class="heading text-center">
 							Try again with another domain name.
 						</h4>
@@ -323,13 +326,13 @@
 				<div class="col-md-12 domainRegister textCenter">
 
 					<div class="succes text-center">
-						<strong class="dname"></span></strong> is available.
+						<strong class="domainname"></span></strong> is available.
 						<h4 class="heading text-center">
 							Get it now!
 						</h4>
 					</div>
 
-					<!-- <div class="succes">Yes <strong class="dname"></strong> is available!
+					<!-- <div class="succes">Yes <strong class="domainname"></strong> is available!
 						<a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=en" class="addToCart borderRadius">Checkout</a>
 						<span class="selectedDomains">
 								<a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=en">
@@ -342,7 +345,7 @@
 					</div> -->
 
 					<div class="alert text-center">
-						Sorry, <strong class="dname"></span></strong> is not available.
+						Sorry, <strong class="domainname"></span></strong> is not available.
 						<h4 class="heading text-center">
 							Try another domain name.
 						</h4>
@@ -373,10 +376,10 @@
 							<td class="firstColumn" rowspan="2">
 								<div class="firstColumn__container">
 									<div class="domainName__wrapper">
-										<div class="domainName" id="dname">{{:domain}}</div>
+										<div class="domainName" id="domainname">{{:domain}}</div>
 										<div class="domainExtension" id="dtld">{{:tld}}</div>
 									</div>
-									<!-- <div class="domainName" id="dname"></div> -->
+									<!-- <div class="domainName" id="domainname"></div> -->
 									<div class="domainLabel__wrapper">
 										<div class="domainLabel costPrice" style="display: block;">Cost price</div>
 										<div class="domainLabel forFree" style="display: block;">Free</div>
@@ -411,7 +414,7 @@
 		<div class="domainResult container thirdSection otherCostPriceDomains">
 			<div class="row margin padding centered">
 				<div class="col-md-12 domainRegister text-center">
-					<h3 class="heading--blue-dark"><strong>Cost Price Domains</strong> cannot be found cheaper elsewhere!</h3>
+					<h3 class="text-blue-dark"><strong>Cost Price Domains</strong> cannot be found cheaper elsewhere!</h3>
 					<table class="table resultTable">
 						<thead class="filter table__header" id="paid_domains">
 							<tr class="table__row">
