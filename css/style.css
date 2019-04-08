@@ -6,42 +6,48 @@
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-	 -moz-box-sizing: border-box;
-		  box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+			box-sizing: border-box;
 }
 ::-moz-selection {
-  color: #fff;
-  background: #00afef;
-  background: rgba(0,174,239,0.85);
+	color: #fff;
+	background: #00afef;
+	background: rgba(0,174,239,0.85);
 }
 ::selection {
-  color: #fff;
-  background: #00afef;
-  background: rgba(0,174,239,0.85);
+	color: #fff;
+	background: #00afef;
+	background: rgba(0,174,239,0.85);
 }
 
-*,html,body {
+html,body {
 	font-family: 'Avenir Next LT Pro';
-	font-size:16px;
-  font-weight: 400;
+	font-size: 16px;
+	font-weight: 400;
+}
 
-}
 strong {
-  font-weight: bold;
+	font-weight: bold;
 }
+
 html {
 	background: #FFF;
 	overflow-x: hidden;
 	color: #666;
 }
+
 input {
 	font-family: inherit;
 }
+
 body.content {
-  background: #FAFAFC;
+	background: #FAFAFC;
 }
-:focus {outline:none;}
+
+:focus {
+	outline:none;
+}
 
 #bs-override a, #bs-override a:hover {
 	text-decoration: none;
@@ -1383,16 +1389,6 @@ body .wrapper-container .wrapper {
 	}
 }
 
-/* #bs-override .pagination {
-	text-align: left;
-}
-
-@media (min-width: 576px) {
-	#bs-override .pagination {
-		text-align: center;
-	}
-} */
-
 .pagination .showmore__wrapper {
 	width: 100%;
 	margin-bottom: 20px;
@@ -1424,37 +1420,15 @@ body .wrapper-container .wrapper {
 	background: #fff;
 }
 
-.pagination #showMoreResults{
-	/* font-size: 16px;
-	text-transform: uppercase;
-	font-weight: 400;
-	background: #FFF;
-	color: #666;
-	padding:  7px 50px;
-	border: 1px solid #CCC;
-	-webkit-border-radius: 4px;
-	   -moz-border-radius: 4px;
-		 	border-radius: 4px; */
-}
-
-.pagination #showAllResults:hover,
-.pagination #showMoreResults:hover{
-	text-decoration: none;
-}
-
 table.domains td {
-width:20%;
-}
-table.domains td img {
-max-width:130px;
+	width: 20%;
 }
 
+table.domains td img {
+	max-width: 130px;
+}
 
 /* ADD TO CART */
-
-.header {
-	z-index: 10000 !important;
-}
 
 .fixedToCart {
 	position: fixed;
@@ -1474,45 +1448,29 @@ max-width:130px;
 /* TABLES */
 
 @media (min-width: 576px) {
-	.domainResult.container.thirdSection.otherCostPriceDomains {
+	.table__section {
 		max-width: unset;
 	}
 }
 
 @media (min-width: 992px) {
-	.domainResult.container.thirdSection.otherCostPriceDomains {
+	.table__section {
 		max-width: 960px;
 	}
 }
 
 @media (min-width: 1200px) {
-	.domainResult.container.thirdSection.otherCostPriceDomains {
+	.table__section {
 		max-width: 1140px;
 	}
 }
 
 .table {
 	line-height: 18px;
-	margin-bottom: 80px;
 }
 
-.resultTable {
-	width: 100%;
-	vertical-align: middle;
+.table__section {
 	line-height: 18px;
-	background: none;
-	border-radius: 0;
-}
-
-.resultTable#top_domain {
-	border-top: 1px solid #000;
-	margin-top: 80px;
-}
-
-.cost-price-domains {
-	height: 0;
-	overflow: hidden;
-	transition: height 0.15s ease-in-out;	
 }
 
 .table__header {
@@ -1550,6 +1508,36 @@ max-width:130px;
 	}
 }
 
+/* .resultTable {
+	width: 100%;
+	vertical-align: middle;
+	line-height: 18px;
+	background: none;
+	border-radius: 0;
+} 
+
+.resultTable,
+.resultTable tr,
+.resultTable td {
+	padding: 0;
+	margin: 0;
+	-moz-background-clip: padding-box;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	position: relative;
+} */
+
+.resultTable#top_domain {
+	border-top: 1px solid #000;
+	margin-top: 80px;
+}
+
+.cost-price-domains {
+	height: 0;
+	overflow: hidden;
+	transition: height 0.15s ease-in-out;	
+}
+
 .table td, .table th {
 	vertical-align: middle;
 	border-top: none;
@@ -1564,33 +1552,41 @@ max-width:130px;
 	background: #fff;
 }
 
-.resultTable,
-.resultTable tr,
-.resultTable td {
-	padding: 0;
-	margin: 0;
-	-moz-background-clip: padding-box;
-	-webkit-background-clip: padding-box;
-	background-clip: padding-box;
-	position: relative;
-}
-
-.thirdSection .resultTable td,
+/* .thirdSection .resultTable td,
 .secondSection .resultTable td {
 	border-top:  1px solid #000;
 }
-.secondSection table.resultTable tr:first-child td,
-.thirdSection table.resultTable tr:first-child td {
-	border-top: 0 !important;
-}
+.secondSection table.resultTable tr:first-of-type td,
+.thirdSection table.resultTable tr:first-of-type td {
+	border-top: 0;
+} */
 
-.table .lastColumn {
+.firstColumn {
+	max-width: calc(50vw - 30px);
 	vertical-align: middle;
+	padding: 20px;
 }
 
-.resultTable .lastColumn{
+@media (max-width: 576px) {
+	.firstColumn {
+		padding: 8px;
+	}
+}
+
+.firstColumn__container {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+	height: 100%;
+}
+
+.lastColumn {
 	width: 40%;
 	max-width: calc(50vw - 15px);
+	border-left: 1px solid #000;
+	margin: 10px;
+	padding: 10px 20px;
 }
 
 .lastColumn__container {
@@ -1610,39 +1606,7 @@ max-width:130px;
 	}
 }
 
-.resultTable .firstColumn, 
-.secondSection .resultTable .firstColumn,
-.thirdSection .resultTable .firstColumn {
-	vertical-align: middle;
-	padding: 20px;
-}
-
-.firstColumn__container {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	flex-wrap: wrap;
-	height: 100%;
-}
-
-.firstColumn {
-	max-width: calc(50vw - 30px);
-}
-
-@media (max-width: 576px) {
-	.thirdSection .resultTable .firstColumn,
-.secondSection .resultTable .firstColumn {
-		padding: 8px;
-	}
-}
-
-.resultTable .lastColumn,
-.thirdSection .resultTable .lastColumn,
-.secondSection .resultTable .lastColumn {
-	padding: 10px 20px;
-}
-
-.resultTable .submitTable{
+/* .resultTable .submitTable{
 	height: 65px;
 }
 
@@ -1656,26 +1620,32 @@ max-width:130px;
 	font-size: 24px;
 	line-height: 65px;
 	cursor: pointer;
-		padding: 0;
+	padding: 0;
 }
+
 .resultTable .submitTable a.topNotAvailable{
 	color: #666;
 	background: none;
 	border-top: 1px solid #CCC;
 }
+
 .resultTable .submitTable a.checkingTopToCart{
 	background-color: #CCC;
 	color: #FFF;
 }
+
 .resultTable .submitTable a:hover{
 	text-decoration: none;
 }
+
 .resultTable .submitTable a i{
 	margin-right: 10px;
 }
+
 .resultTable .submitTable a.addTopToCart{
 	background: #00adeb;
 }
+
 .resultTable .submitTable a.removeSmall{
 	width: auto;
 	color: #FFF;
@@ -1692,13 +1662,11 @@ max-width:130px;
 	right: 10px;
 	opacity: 0.5;
 }
+
 .resultTable .submitTable a.removeSmall:hover{
 	opacity: 1;
-}
-.resultTable .priceTable  {
-	margin: 10px;
-	border-left: 1px solid #000;
-}
+} */
+
 .domainPrice__wrapper {
 	display: flex;
 	width: 100%;
@@ -1717,40 +1685,30 @@ max-width:130px;
 	}
 }
 
-.resultTable .priceTable .currency {
-	font-size: 25px;
-	font-weight: 600;
-	position: relative;
-	float: left;
-	margin: 17px 10px 0 45px;
-}
-
-.table .lastColumn .domainPrice {
-	font-size: 16px;
+.domainPrice {
+	font-size: 30px;
 	font-weight: 600;
 	position: relative;
 	float: left;
 	margin: 9px 6px 0 0px;
 }
 
-.table .lastColumn .domainPrice span{
+.cents {
 	font-size: 50%;
 	font-weight: 600;
-	top: -7px;
-	right: -14px;
+	top: -6px;
+	right: -12px;
 	position: absolute;
 }
-.firstSection .resultTable .priceTable .domainPrice span{
-	right: -20px;
-	top: -10px;
+
+.currency {
+	font-size: 20px;
+	font-weight: 600;
+	position: relative;
+	float: left;
+	margin: 9px 6px 0 0;
 }
-.table .lastColumn .domainPrice span{
-	right: -12px;
-	top: -6px;
-}
-.resultTable .priceTable {
-	vertical-align: middle;
-}
+
 .resultTable .priceTable .addSelect {
 	background: #00afef;
 	font-size: 15px;
@@ -1958,30 +1916,6 @@ max-width:130px;
 	color: red;
 }
 
-.secondSection .resultTable .priceTable .currency {
-	font-size: 18px;
-	font-weight: 600;
-	position: relative;
-	float: left;
-	margin: 0px 6px 0 0px;
-}
-.secondSection .resultTable .priceTable .domainPrice {
-	font-size: 40px;
-}
-.secondSection .resultTable .specials .priceTable .domainPrice {
-	clear: left;
-}
-.table .lastColumn .currency {
-	font-size: 16px;
-	font-weight: 600;
-	position: relative;
-	float: left;
-	margin: 9px 6px 0 0px;
-}
-.table .lastColumn .domainPrice {
-	font-size: 30px;
-}
-
 .thirdSection .resultTable th {
 	background: #f8f5f5;
 	padding:  10px 20px 10px;
@@ -2103,8 +2037,9 @@ textarea.apitextarea{
 	left: 0;
 	margin-right: 10px;
 }
+
 .filter input[type=checkbox]:checked + label:before {
-	font-family: FontAwesome;
+	font-family: "Font Awesome 5 Free";
 	content: "\f00c";
 	color: #00afef;
 	font-size: 14px;
