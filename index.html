@@ -406,11 +406,11 @@
 										<div class="domainPrice" id="dprice_int"><span id="dprice_cent" class="cents"></span></div>
 									</div>
 									<a class="addTopToCart" id="top_domain_get_it_text" style="display:none;"></a>
-									<a class="button button--small addLoading borderRadius checkingTopToCart" style="display:none;"><i class="fa fa-spinner fa-spin"></i>Checking</a>
+									<a class="button button--small addLoading borderRadius checkingTopToCart" style="display:none;"><i class="button__icon fa fa-spinner fa-spin"></i>Checking</a>
 									<!-- showed by default -->
-									<a class="addSelected borderRadius addedToCart"><i class="fa fa-check"></i>Selected</a>
-									<a class="removeSelected button button--small borderRadius"><i class="fa fa-times"></i>Remove</a>
-									<a class="topNotAvailable" style="display:none;"><i class="fa fa-times"></i>Not available</a>
+									<p class="addSelected borderRadius addedToCart"><i class="button__icon fa fa-check"></i>Selected</p>
+									<a class="removeSelected button button--small borderRadius"><i class="button__icon fa fa-times"></i>Remove</a>
+									<p class="topNotAvailable" style="display:none;"><i class="button__icon fa fa-times"></i>Not available</p>
 								</div>
 							</td>
 						</tr>
@@ -516,17 +516,17 @@
 								<a class="button button--small addSelect borderRadius" {{if is_in_cart==0}} {{else}} style="display:none;" {{/if}} >Select</a>
 	
 								<!-- LOADING BTN -->
-								<a class="button button--small addLoading borderRadius" style="display:none;"><i class="fa fa-spinner fa-spin"></i>Checking</a>
+								<a class="button button--small addLoading borderRadius" style="display:none;"><i class="button__icon fa fa-spinner fa-spin"></i>Checking</a>
 	 
 								<!-- REMOVE FROM CART BTN -->
-								<a class="addSelected borderRadius" {{if is_in_cart==0}} style="display:none;" {{else}} style="display:block;"{{/if}}><i class="fa fa-check"></i>Selected</a>
-								<a class="removeSelected button button--small borderRadius" {{if is_in_cart==0}} style="display:none;" {{else}} style="display:block;"{{/if}} ><i class="fa fa-times"></i>Remove</a>
+								<p class="addSelected borderRadius" {{if is_in_cart==0}} style="display:none;" {{else}} style="display:block;"{{/if}}><i class="button__icon fa fa-check"></i>Selected</p>
+								<a class="removeSelected button button--small borderRadius" {{if is_in_cart==0}} style="display:none;" {{else}} style="display:block;"{{/if}} ><i class="button__icon fa fa-times"></i>Remove</a>
 	
 								<!-- NOT AVAILABLE BTN -->
-								<a class="notAvailable notAvailable--alt borderRadius" style="display:none;"><i class="fa fa-times"></i>&nbsp;Unavailable</a>
+								<p class="notAvailable notAvailable--alt borderRadius" style="display:none;"><i class="button__icon fa fa-times"></i>&nbsp;Unavailable</p>
 							{{else}}
 								<!-- NOT AVAILABLE BTN -->
-								<a class="notAvailable borderRadius"><i class="fa fa-times"></i>&nbsp;Unavailable</a>
+								<p class="notAvailable borderRadius"><i class="button__icon fa fa-times"></i>&nbsp;Unavailable</p>
 							{{/if}}
 						</div>
 					</td>
