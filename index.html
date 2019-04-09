@@ -408,9 +408,9 @@
 									<a class="addTopToCart" id="top_domain_get_it_text" style="display:none;"></a>
 									<a class="button button--small addLoading borderRadius checkingTopToCart" style="display:none;"><i class="button__icon fa fa-spinner fa-spin"></i>Checking</a>
 									<!-- showed by default -->
-									<p class="addSelected borderRadius addedToCart"><i class="button__icon fa fa-check"></i>Selected</p>
-									<a class="removeSelected button button--small borderRadius"><i class="button__icon fa fa-times"></i>Remove</a>
-									<p class="topNotAvailable" style="display:none;"><i class="button__icon fa fa-times"></i>Not available</p>
+									<p class="selected addSelected borderRadius addedToCart"><i class="button__icon fa fa-check"></i>Selected</p>
+									<a class="remove removeSelected button button--small borderRadius"><i class="button__icon fa fa-times"></i>Remove</a>
+									<p class="topNotAvailable" style="display:none;"><i class="button__icon fa fa-times"></i>Unavailable</p>
 								</div>
 							</td>
 						</tr>
@@ -433,14 +433,14 @@
 							<tr class="table__row">
 								<th colspan="2">
 									<div class="filter__container">
-										<div class="slideMaxCharacters">
-											<span>Max. characters</span>
-											<div id="slider"></div>
-											<span class="range" id="max_chars">20</span>
+										<div class="filter__item slideMaxCharacters">
+											<p class="filter__text">Max. characters</p>
+											<div class="slider" id="slider"></div>
+											<span class="range filter__text" id="max_chars">20</span>
 										</div>
-										<div class="locations">
-											<input id="locations" type="checkbox">
-											<label for="locations">Countries/locations only</label>
+										<div class="filter__item locations">
+											<input class="checkbox" id="locations" type="checkbox">
+											<label for="locations" class="checkbox__label filter__text">Countries/locations only</label>
 										</div>
 									</div>
 								</th>
@@ -471,9 +471,9 @@
 									<div class="domainLabel specialDomain" style="display:block;">
 										<div class="domainLabel__hole"></div>
 										Special domain 
-										<span class="popupBalloon balloonUp">
-											<i class="fa fa-question-circle"></i>
-											<p>THIS DOMAIN CAN ONLY BE REGISTERED FOR A FEE, BECAUSE THE DOMAIN IS SHORT OR CONTAINS A MEANINGFUL DICTIONARY WORD. A SPECIAL DOMAIN IS OF GREAT VALUE!
+										<span class="popup__trigger popupBalloon balloonUp">
+											<i class="popup__icon fa fa-question-circle"></i>
+											<p class="popup popup--blue-dark" >THIS DOMAIN CAN ONLY BE REGISTERED FOR A FEE, BECAUSE THE DOMAIN IS SHORT OR CONTAINS A MEANINGFUL DICTIONARY WORD. A SPECIAL DOMAIN IS OF GREAT VALUE!
 										</span>
 									</div>
 								</div>
@@ -492,9 +492,9 @@
 											{{if type == "SPECIAL"}}<div class="domainLabel specialDomain" style="display:block;">
 													<div class="domainLabel__hole"></div>
 													Special domain 
-													<span class="popupBalloon balloonUp">
-														<i class="fa fa-question-circle"></i>
-														<p>THIS DOMAIN CAN ONLY BE REGISTERED FOR A FEE, BECAUSE THE DOMAIN IS SHORT OR CONTAINS A MEANINGFUL DICTIONARY WORD. A SPECIAL DOMAIN IS OF GREAT VALUE!
+													<span class="popup__trigger popupBalloon balloonUp">
+														<i class="popup__icon fa fa-question-circle"></i>
+														<p class="popup popup--blue-dark ">THIS DOMAIN CAN ONLY BE REGISTERED FOR A FEE, BECAUSE THE DOMAIN IS SHORT OR CONTAINS A MEANINGFUL DICTIONARY WORD. A SPECIAL DOMAIN IS OF GREAT VALUE!
 													</span>
 												</div>{{/if}}
 										</div>
@@ -513,20 +513,20 @@
 								</div>
 	
 								<!-- ADD TO CART BTN -->
-								<a class="button button--small addSelect borderRadius" {{if is_in_cart==0}} {{else}} style="display:none;" {{/if}} >Select</a>
+								<a class="select button button--small addSelect borderRadius" {{if is_in_cart==0}} {{else}} style="display:none;" {{/if}} >Select</a>
 	
 								<!-- LOADING BTN -->
-								<a class="button button--small addLoading borderRadius" style="display:none;"><i class="button__icon fa fa-spinner fa-spin"></i>Checking</a>
+								<a class="checking button button--small addLoading borderRadius" style="display:none;"><i class="button__icon fa fa-spinner fa-spin"></i>Checking</a>
 	 
 								<!-- REMOVE FROM CART BTN -->
-								<p class="addSelected borderRadius" {{if is_in_cart==0}} style="display:none;" {{else}} style="display:block;"{{/if}}><i class="button__icon fa fa-check"></i>Selected</p>
-								<a class="removeSelected button button--small borderRadius" {{if is_in_cart==0}} style="display:none;" {{else}} style="display:block;"{{/if}} ><i class="button__icon fa fa-times"></i>Remove</a>
+								<p class="selected addSelected borderRadius" {{if is_in_cart==0}} style="display:none;" {{else}} style="display:block;"{{/if}}><i class="button__icon fa fa-check"></i>Selected</p>
+								<a class="remove removeSelected button button--small borderRadius" {{if is_in_cart==0}} style="display:none;" {{else}} style="display:block;"{{/if}} ><i class="button__icon fa fa-times"></i>Remove</a>
 	
 								<!-- NOT AVAILABLE BTN -->
-								<p class="notAvailable notAvailable--alt borderRadius" style="display:none;"><i class="button__icon fa fa-times"></i>&nbsp;Unavailable</p>
+								<p class="unavailable unavailable--alt notAvailable borderRadius" style="display:none;"><i class="button__icon fa fa-times"></i>&nbsp;Unavailable</p>
 							{{else}}
 								<!-- NOT AVAILABLE BTN -->
-								<p class="notAvailable borderRadius"><i class="button__icon fa fa-times"></i>&nbsp;Unavailable</p>
+								<p class="unavailable notAvailable borderRadius"><i class="button__icon fa fa-times"></i>&nbsp;Unavailable</p>
 							{{/if}}
 						</div>
 					</td>
