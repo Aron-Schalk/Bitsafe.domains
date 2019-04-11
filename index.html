@@ -351,13 +351,25 @@
 						</h4>
 					</div>
 					<div class="checkout-section">
-						<span class="selectedDomains">
+						<span class="selectedDomains text-blue">
 							<a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=en">
-								<span class="nrSelectedDomains">0</span>
-								<span class="multipleSelectedDomains"> domains in cart</span>
-								<span class="singleSelectedDomain" style="display:none"> domain selected</span>
+								<span class="nrSelectedDomains text-blue">0</span>
+								<span class="multipleSelectedDomains text-blue"> domains in cart</span>
+								<span class="singleSelectedDomain text-blue" style="display:none"> domain selected</span>
 							</a>
-							<span class="maxCartReached" style="display:none"> (Max. reached <span class="popupBalloon balloonDown borderRadius borderRadius"><i class="fa fa-question-circle"></i><p>Maximum amount reached <a href="https://www.freenom.com/en/resellers.html" target="_blank">Become a reseller</a></p></span>)</span>
+							<span class="maxCartReached maxdomains" style="display:none">
+								(Max. reached 
+								<span class="popup__trigger popupBalloon balloonUp borderRadius">
+									<i class="popup__icon fa fa-question-circle"></i>
+									<p class="maxdomains__popup popup text-center">
+										You have reached the maximum amount of domains in your cart 
+										<a class="button button--small button--inverse button--margin button--block" href="https://www.freenom.com/en/resellers.html" target="_blank">
+											Become a reseller
+										</a>
+									</p>
+								</span>
+								)
+							</span>
 						</span>
 						<a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=en" class="button button--yellow addToCart borderRadius">Checkout</a>
 					</div>
@@ -391,9 +403,9 @@
 										<div class="domainLabel specialDomain" style="display:block;">
 											<div class="domainLabel__hole"></div>
 											Special domain 
-											<span class="popupBalloon balloonUp">
-												<i class="fa fa-question-circle"></i>
-												<p>THIS DOMAIN CAN ONLY BE REGISTERED FOR A FEE, BECAUSE THE DOMAIN IS SHORT OR CONTAINS A MEANINGFUL DICTIONARY WORD. A SPECIAL DOMAIN IS OF GREAT VALUE!
+											<span class="popup__trigger popupBalloon balloonUp">
+												<i class="popup__icon fa fa-question-circle"></i>
+												<p class="domainLabel__popup popup popup--blue-dark" >THIS DOMAIN CAN ONLY BE REGISTERED FOR A FEE, BECAUSE THE DOMAIN IS SHORT OR CONTAINS A MEANINGFUL DICTIONARY WORD. A SPECIAL DOMAIN IS OF GREAT VALUE!
 											</span>
 										</div>
 									</div>
@@ -405,9 +417,8 @@
 										<div class="currency" id="dcurrency"></div>
 										<div class="domainPrice" id="dprice_int"><span id="dprice_cent" class="cents"></span></div>
 									</div>
-									<a class="addTopToCart" id="top_domain_get_it_text" style="display:none;"></a>
+									<p class="addTopToCart getitnow text-blue" id="top_domain_get_it_text" style="display:none;"></p>
 									<a class="button button--small addLoading borderRadius checkingTopToCart" style="display:none;"><i class="button__icon fa fa-spinner fa-spin"></i>Checking</a>
-									<!-- showed by default -->
 									<p class="selected addSelected borderRadius addedToCart"><i class="button__icon fa fa-check"></i>Selected</p>
 									<a class="remove removeSelected button button--small borderRadius"><i class="button__icon fa fa-times"></i>Remove</a>
 									<p class="topNotAvailable" style="display:none;"><i class="button__icon fa fa-times"></i>Unavailable</p>
@@ -473,7 +484,7 @@
 										Special domain 
 										<span class="popup__trigger popupBalloon balloonUp">
 											<i class="popup__icon fa fa-question-circle"></i>
-											<p class="popup popup--blue-dark" >THIS DOMAIN CAN ONLY BE REGISTERED FOR A FEE, BECAUSE THE DOMAIN IS SHORT OR CONTAINS A MEANINGFUL DICTIONARY WORD. A SPECIAL DOMAIN IS OF GREAT VALUE!
+											<p class="domainLabel__popup popup popup--blue-dark" >THIS DOMAIN CAN ONLY BE REGISTERED FOR A FEE, BECAUSE THE DOMAIN IS SHORT OR CONTAINS A MEANINGFUL DICTIONARY WORD. A SPECIAL DOMAIN IS OF GREAT VALUE!
 										</span>
 									</div>
 								</div>
@@ -494,7 +505,7 @@
 													Special domain 
 													<span class="popup__trigger popupBalloon balloonUp">
 														<i class="popup__icon fa fa-question-circle"></i>
-														<p class="popup popup--blue-dark ">THIS DOMAIN CAN ONLY BE REGISTERED FOR A FEE, BECAUSE THE DOMAIN IS SHORT OR CONTAINS A MEANINGFUL DICTIONARY WORD. A SPECIAL DOMAIN IS OF GREAT VALUE!
+														<p class="domainLabel__popup popup popup--blue-dark ">THIS DOMAIN CAN ONLY BE REGISTERED FOR A FEE, BECAUSE THE DOMAIN IS SHORT OR CONTAINS A MEANINGFUL DICTIONARY WORD. A SPECIAL DOMAIN IS OF GREAT VALUE!
 													</span>
 												</div>{{/if}}
 										</div>
@@ -545,13 +556,25 @@
 					<a class="showall" href="javascript:;" id="showAllResults">Show all</a>
 				</div>
 				<div class="checkout-section checkout-section--alt">
-						<span class="selectedDomains">
+						<span class="selectedDomains text-blue">
 							<a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=en">
-								<span class="nrSelectedDomains">0</span>
-								<span class="multipleSelectedDomains"> domains in cart</span>
-								<span class="singleSelectedDomain" style="display:none"> domain selected</span>
+								<span class="nrSelectedDomains text-blue">0</span>
+								<span class="multipleSelectedDomains text-blue"> domains in cart</span>
+								<span class="singleSelectedDomain text-blue" style="display:none"> domain selected</span>
 							</a>
-							<span class="maxCartReached" style="display:none"> (Max. reached <span class="popupBalloon balloonDown borderRadius borderRadius"><i class="fa fa-question-circle"></i><p>Maximum amount reached <a href="https://www.freenom.com/en/resellers.html" target="_blank">Become a reseller</a></p></span>)</span>
+							<span class="maxCartReached maxdomains" style="display:none">
+								(Max. reached 
+								<span class="popup__trigger popupBalloon balloonUp borderRadius">
+									<i class="popup__icon fa fa-question-circle"></i>
+									<p class="maxdomains__popup popup text-center">
+										You have reached the maximum amount of domains in your cart 
+										<a class="button button--small button--inverse button--margin button--block" href="https://www.freenom.com/en/resellers.html" target="_blank">
+											Become a reseller
+										</a>
+									</p>
+								</span>
+								)
+							</span>
 						</span>
 						<a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=en" class="button button--yellow addToCart borderRadius">Checkout</a>
 					</div>

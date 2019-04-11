@@ -1,4 +1,4 @@
-/* Reset */
+/* RESET */
 /* Handled by reset.css from https://github.com/murtaugh/HTML5-Reset */
 
 /* GENERAL */
@@ -981,6 +981,10 @@ h2, h4 {
 	border-style: solid;
 }
 
+.button--block {
+	display: block;
+}
+
 .button--margin {
 	display: inline-flex;
 	margin: 40px 0;
@@ -1047,10 +1051,13 @@ h2, h4 {
 
 .alert .dname, .succes .dname {
 	display: block;
+	max-width: 100%;
 	font-size: 32px;
 	font-weight: bold;
+	line-height: 1.4;
 	color: #00afef;
-	margin: 0 1%;
+	overflow-wrap: break-word;
+	margin: 0 1% 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1278,6 +1285,16 @@ h2, h4 {
 	}
 }
 
+#bs-override .firstColumn {
+	padding: 10px 5x 10px 10px;
+}
+
+@media (min-width: 768px) {
+	#bs-override .firstColumn {
+		padding-right: 10px;
+	}
+}
+
 .firstColumn__container {
 	display: flex;
 	justify-content: flex-start;
@@ -1296,26 +1313,8 @@ h2, h4 {
 
 .domainname__wrapper {
 	display: flex;
-	flex-wrap: wrap;
 	width: 100%;
-	max-width: 100%;
 	color: #000;
-	margin-bottom: 8px;
-}
-
-@media screen and (min-width: 576px) {
-	.domainname__wrapper {
-		flex-wrap: unset;
-	}
-}
-
-@media screen and (min-width: 768px) {
-	.domainname__wrapper {
-		display: flex;
-		flex-wrap: nowrap;
-		width: auto;
-		margin-bottom: 0;
-	}
 }
 
 .domainname__wrapper--grey {
@@ -1329,13 +1328,6 @@ h2, h4 {
 	margin-left: 0;
 }
 
-@media screen and (min-width: 768px) {
-	.domainLabel__wrapper {
-		flex-direction: column;
-		margin-left: auto;
-	}
-}
-
 .domainLabel {
 	background: #00adeb;
 	font-size: 14px;
@@ -1344,7 +1336,7 @@ h2, h4 {
 	color: #FFF;
 	text-transform: uppercase;
 	position: relative;
-	margin: 2px 4px 0;
+	margin: 4px;
 	padding: 6px 6px 6px 24px;
 	-webkit-border-radius: 4px;
 	   -moz-border-radius: 4px;
@@ -1370,6 +1362,7 @@ h2, h4 {
 .domainLabel.costPrice {
 	background: orange;
 }
+
 .domainLabel.specialDomain {
 	background: #34437a;
 }
@@ -1395,28 +1388,31 @@ h2, h4 {
 		 	border-radius: 4px;
 }
 
-.popup {
-	display: none;
+.domainLabel__popup {
 	width: calc(100vw - 80px);
-	background: #00adec;
-	font-size: 16px;
-	font-weight: 600;
-	line-height: 1.5;
-	color: #FFF;
 	text-align: left;
-	position: absolute;
 	top: 28px;
 	left: 0;
 	padding: 16px;
-	z-index: 10000;
 }
 
 @media (min-width: 576px) {
-	.popup {
+	.domainLabel__popup {
 		width: 300px;
 		top: 0;
 		left: calc(100% + 2px);
 	}
+}
+
+.popup {
+	display: none;
+	background: #00afef;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.5;
+	color: #FFF;
+	position: absolute;
+	z-index: 10000;
 }
 
 .popup--blue-dark {
@@ -1450,9 +1446,19 @@ h2, h4 {
 	padding: 10px 20px;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
 	.lastColumn {
 		border-left: 1px solid #000;
+	}
+}
+
+#bs-override .lastColumn {
+	padding: 10px 5px 10px 10px;
+}
+
+@media (min-width: 768px) {
+	#bs-override .lastColumn {
+		padding-left: 10px;
 	}
 }
 
@@ -1463,17 +1469,17 @@ h2, h4 {
 .lastColumn__container {
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
+	justify-content: flex-end;
+	align-items: flex-end;
 	flex-wrap: wrap;
 	height: 100%;
-	padding: 20px 0;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
 	.lastColumn__container {
 		flex-direction: row;
-		padding: 0;
+		justify-content: space-between;
+		align-items: center;
 	}
 }
 
@@ -1497,8 +1503,7 @@ h2, h4 {
 	display: flex;
 	max-width: 100%;
 	color: #000;
-	margin: 0 0 8px auto;
-	padding: 0 12px 0 0;
+	padding: 0 20px 0 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -1514,29 +1519,12 @@ h2, h4 {
 	font-size: 50%;
 	font-weight: 600;
 	top: -6px;
-	right: -12px;
+	right: -16px;
 	position: absolute;
 }
 
-.selectedDomains {
-	font-size: 16px;
-	line-height: 34px;
-	color: #999;
-	margin: 0 20px 10px 0; 
-}
-
-@media screen and (min-width: 768px) {
-	.selectedDomains {
-		margin: 0 20px 0 0;
-	}
-}
-
-.selectedDomains span {
-	color: #00afef;
-}
-.selectedDomains a:hover {
-	text-decoration: none;
-	border: 0;
+.getitnow {
+	padding: 14px 0;
 }
 
 .select {
@@ -1547,14 +1535,14 @@ h2, h4 {
 	cursor: pointer;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
 	.select {
-		margin: 0 0 0 auto;
+		margin: 0;
 	}
 }
 
 .checking {
-	margin: 20px auto 0;
+	margin: 20px 0 0;
 	padding: 14px;
 	cursor: pointer;
 }
@@ -1575,7 +1563,8 @@ h2, h4 {
 }
 
 .unavailable--alt {
-	margin: 20px auto 0;
+	margin: 20px 0 0;
+	padding: 14px 0;
 }
 
 @media (min-width: 768px) {
@@ -1586,19 +1575,20 @@ h2, h4 {
 
 .selected {
 	color: #00afef;
-	margin: 20px auto 10px;
+	margin: 20px 0 0;
 	padding: 0 5px;
 }
 
 @media (min-width: 768px) {
 	.selected {
 		margin: 14px 0 14px auto;
+		padding: 0 22px;
 	}
 }
 
 .remove {
 	background: red;
-	margin: 10px auto 0;
+	margin: 20px 0 0;
 	padding: 14px;
 }
 
@@ -1609,16 +1599,16 @@ h2, h4 {
 	}
 }
 
+#bs-override .remove:hover {
+	background: #f6f9f9;
+	color: red;
+}
+
 #bs-override .select:hover,
 #bs-override .checking,
 #bs-override .checking:hover {
 	background: #f6f9f9;
 	color: #00afef;
-}
-
-#bs-override .selected:hover {
-	background: #f6f9f9;
-	color: red;
 }
 
 /* TABLE: BOTTOM */
@@ -1627,7 +1617,7 @@ h2, h4 {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	align-items: center;
+	align-items: flex-start;
 	margin: 40px auto;
 }
 
@@ -1654,17 +1644,18 @@ h2, h4 {
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	/* width: 60%; */
+	width: 100%;
 	font-weight: 600;
 	font-size: 16px;
 	line-height: 34px;
 	text-align: center;
-	/* margin-right: 15px; */
+	margin-bottom: 40px;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 992px) {
 	.pagination {
-		margin-right: 0;
+		width: auto;
+		margin-bottom: 0;
 	}
 }
 
@@ -1708,15 +1699,12 @@ h2, h4 {
 }
 
 .checkout-section--alt {
-	flex-wrap: wrap;
-	/* max-width: 40%; */
-	margin-top: 20px;
-	margin-left: 15px;
+	width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
 	.checkout-section--alt {
-		margin-left: 10px;
+		width: auto;
 	}
 }
 
@@ -1749,6 +1737,29 @@ h2, h4 {
 
 .fixedToCart.active {
 	top:  90px;
+}
+
+.selectedDomains {
+	position: relative;
+	margin: 0 20px 0 0; 
+}
+
+.maxdomains {
+	display: block;
+}
+
+@media screen and (min-width: 576px) {
+	.maxdomains {
+		display: inline-block;
+	}
+}
+
+.maxdomains__popup {
+	width: 300px;
+	border-radius: 4px;
+	top: 100%;
+	left: 0;
+	padding: 16px 16px 0;
 }
 
 /* FOOTER */
