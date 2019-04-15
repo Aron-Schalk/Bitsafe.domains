@@ -1820,6 +1820,10 @@ h2, h4 {
 /* ROTZOOI */
 
 
+.testtest {
+	word-break: break-all;
+}
+
 
 /* FREENOM LEGACY */
 

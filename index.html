@@ -25,7 +25,6 @@
 
 	<script type="text/javascript" src="https://dev.my.bitsafe.domains/assets/js/jsrender.min.js"></script>
 	<script type="text/javascript" src="https://dev.my.bitsafe.domains/includes/domains/fn-available-js.php"></script>
-	<!-- <script type="text/javascript" src="http://register.freenom.com/js/login.js"></script> -->
 	<script type="text/javascript" src="https://dev.my.bitsafe.domains/includes/jscript/loggedon.php"></script>
 
 <script>
@@ -261,7 +260,6 @@
 			<div class="hamburger__bar hamburger__bar--bottom"></div>
 		</button>
 	</nav>
-
 	<!-- NAVIGATION END -->
 
 	<!-- HERO BEGIN -->
@@ -277,10 +275,10 @@
 					</h1>
 				</div>
 				<div class="col-lg-8 search__wrapper">
-						<form method="get" class="search" id="domainForm">
-						    <input type="text" class="search__field" id="idn" placeholder="Register your new domain" name="domainname" />
-						    <a class="search__button button button--inverse" id="submitBtn">Search</a>
-						</form>
+					<form method="get" class="search" id="domainForm">
+						<input type="text" class="search__field" id="idn" placeholder="Register your new domain" name="domainname" />
+						<a class="search__button button button--inverse" id="submitBtn">Search</a>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -324,26 +322,12 @@
 		<div class="container domainResult firstSection">
 			<div class="row margin padding centered">
 				<div class="col-md-12 domainRegister textCenter">
-
 					<div class="succes text-center">
 						<strong class="dname"></span></strong> is available.
 						<h4 class="heading text-center">
 							Get it now!
 						</h4>
 					</div>
-
-					<!-- <div class="succes">Yes <strong class="dname"></strong> is available!
-						<a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=en" class="addToCart borderRadius">Checkout</a>
-						<span class="selectedDomains">
-								<a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=en">
-								<span class="nrSelectedDomains">0</span>
-								<span class="multipleSelectedDomains"> domains in cart</span>
-								<span class="singleSelectedDomain" style="display:none"> domain selected</span>
-								</a>
-								<span class="maxCartReached" style="display:none"> (Max. reached <span class="popupBalloon balloonDown borderRadius borderRadius"><i class="fa fa-question-circle"></i><p>Maximum amount reached <a href="https://www.freenom.com/en/resellers.html" target="_blank">Become a reseller</a></p></span>)</span>
-						</span>
-					</div> -->
-
 					<div class="alert text-center">
 						Sorry, <strong class="dname"></span></strong> is not available.
 						<h4 class="heading text-center">
@@ -373,16 +357,6 @@
 						</span>
 						<a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=en" class="button button--yellow addToCart borderRadius">Checkout</a>
 					</div>
-					<!-- <div class="no_tld_result">
-						<a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=en" class="button button--yellow addToCart borderRadius">Checkout</a>
-						<span class="selectedDomains">
-								<a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=en"><span class="nrSelectedDomains">0</span>
-								<span class="multipleSelectedDomains"> domains in cart</span>
-								<span class="singleSelectedDomain" style="display:none"> domain selected</span>
-								</a>
-								<span class="maxCartReached" style="display:none"> (Max. reached <span class="popupBalloon balloonDown borderRadius borderRadius"><i class="fa fa-question-circle"></i><p>Maximum amount reached <a href="https://www.freenom.com/en/resellers.html" target="_blank">Become a reseller</a></p></span>)</span>
-						</span>
-					</div> -->
 					<table class="table resultTable" id = "top_domain">
 						<tr class="table__row">
 							<td class="firstColumn" rowspan="2">
@@ -430,8 +404,10 @@
 			</div>
 		</div>
 		<!-- AVAILABILITY END -->
+
 		<input type="hidden" id="top_domain_get_it_free_text" value="Get it for free!" />
 		<input type="hidden" id="top_domain_get_it_now_text" value="Get it now!"  />
+		
 		<!-- TABLE BEGIN -->
 		<div class="table__section domainResult container thirdSection otherCostPriceDomains">
 			<div class="row margin padding centered">
@@ -457,14 +433,9 @@
 								</th>
 							</tr>
 						</thead>
-					<!-- BEGIN FOR EACH -->
-					<!-- END FOR EACH -->
-						<!-- <div class="domainPrice">6.<span class="cents">78</span></div> -->
 					</table>
 				</div>
-			</div>
-
-			
+			</div>			
 			<script id="paiddomain_tmpl" type="text/x-jsrender">
 				<tr class="table__row paid_rows" location="{{:location}}" style="display:none;">
 					<td class="firstColumn">
@@ -548,49 +519,36 @@
 
 		<!-- PAGINATION BEGIN -->
 		<section class="container table__bottom bottomCart paginate">
-				<div class="pagination">
-					<div class="showmore__wrapper">
-						<a class="button button--ghost showmore" href="javascript:;" id="showMoreResults">Show more&nbsp;&nbsp;<i class="fa fa-angle-down"></i></a>
-					</div>
-					<span>Showing results 1 / <span id="countResults">20</span></span>
-					<a class="showall" href="javascript:;" id="showAllResults">Show all</a>
+			<div class="pagination">
+				<div class="showmore__wrapper">
+					<a class="button button--ghost showmore" href="javascript:;" id="showMoreResults">Show more&nbsp;&nbsp;<i class="fa fa-angle-down"></i></a>
 				</div>
-				<div class="checkout-section checkout-section--alt">
-						<span class="selectedDomains text-blue">
-							<a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=en">
-								<span class="nrSelectedDomains text-blue">0</span>
-								<span class="multipleSelectedDomains text-blue"> domains in cart</span>
-								<span class="singleSelectedDomain text-blue" style="display:none"> domain selected</span>
-							</a>
-							<span class="maxCartReached maxdomains" style="display:none">
-								(Max. reached 
-								<span class="popup__trigger popupBalloon balloonUp borderRadius">
-									<i class="popup__icon fa fa-question-circle"></i>
-									<p class="maxdomains__popup popup text-center">
-										You have reached the maximum amount of domains in your cart 
-										<a class="button button--small button--inverse button--margin button--block" href="https://www.freenom.com/en/resellers.html" target="_blank">
-											Become a reseller
-										</a>
-									</p>
-								</span>
-								)
-							</span>
-						</span>
-						<a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=en" class="button button--yellow addToCart borderRadius">Checkout</a>
-					</div>
-
-					<!-- <div class="domainRegister textCenter" style="margin-top: 0;">
-						<a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=en" class="button button--yellow addToCart borderRadius">Checkout</a>
-						<span class="selectedDomains">
-								<a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=en">
-									<span class="nrSelectedDomains">0</span>
-									<span class="multipleSelectedDomains"> domains in cart</span>
-									<span class="singleSelectedDomain" style="display:none"> domain selected</span>
+				<span>Showing results 1 / <span id="countResults">20</span></span>
+				<a class="showall" href="javascript:;" id="showAllResults">Show all</a>
+			</div>
+			<div class="checkout-section checkout-section--alt">
+				<span class="selectedDomains text-blue">
+					<a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=en">
+						<span class="nrSelectedDomains text-blue">0</span>
+						<span class="multipleSelectedDomains text-blue"> domains in cart</span>
+						<span class="singleSelectedDomain text-blue" style="display:none"> domain selected</span>
+					</a>
+					<span class="maxCartReached maxdomains" style="display:none">
+						(Max. reached 
+						<span class="popup__trigger popupBalloon balloonUp borderRadius">
+							<i class="popup__icon fa fa-question-circle"></i>
+							<p class="maxdomains__popup popup text-center">
+								You have reached the maximum amount of domains in your cart 
+								<a class="button button--small button--inverse button--margin button--block" href="https://www.freenom.com/en/resellers.html" target="_blank">
+									Become a reseller
 								</a>
-								<span class="maxCartReached" style="display:none"> (Max. reached <span class="popupBalloon balloonDown borderRadius borderRadius"><i class="fa fa-question-circle"></i><p>Maximum amount reached <a href="https://www.freenom.com/en/resellers.html" target="_blank">Become a reseller</a></p></span>)</span>
+							</p>
 						</span>
-					</div> -->
-
+						)
+					</span>
+				</span>
+				<a href="https://dev.my.bitsafe.domains/cart.php?a=confdomains&language=en" class="button button--yellow addToCart borderRadius">Checkout</a>
+			</div>
 		</section>
 		<!-- PAGINATION END -->
 	</div>
