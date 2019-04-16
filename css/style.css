@@ -131,6 +131,10 @@ h2, h4 {
 	color: #00afef;
 }
 
+.text-bold {
+	font-weight: bold;
+}
+
 /* NAVBAR */
 
 .navbar {
@@ -1274,8 +1278,13 @@ h2, h4 {
 /* TABLE: COLUMN */
 
 .column	{
-	border-left: 1px solid #000;
 	padding: 10px 5px 10px 10px;
+}
+
+@media (min-width: 768px) {
+	.column {
+		border-left: 1px solid #000;
+	}
 }
 
 /* TABLE: FIRST COLUMN */
