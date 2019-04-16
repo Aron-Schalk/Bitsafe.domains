@@ -27,7 +27,7 @@
 	<script type="text/javascript" src="https://dev.my.bitsafe.domains/includes/domains/fn-available-js.php"></script>
 	<script type="text/javascript" src="https://dev.my.bitsafe.domains/includes/jscript/loggedon.php"></script>
 
-<script>
+<script type="text/javascript">
 	$(function() {
 		$( "#slider" ).slider({
 			step: 5, value: 90, max: 90
@@ -38,12 +38,24 @@
 		$data = $.parseJSON($str);
 		$tmpl = $.templates("#domain_tmpl");
 		$html_tld = $tmpl.render($data.tld);
-		$("#pricing_table").append($html_tld)
+		$("#tld_pricing").append($html_tld)
 	}
 
 	$(function() {
 		$.getScript("/pricing_eur.json");
 	});
+
+
+	// function process_pricing($str) {
+	// 	$data = $.parseJSON($str);
+	// 	$tmpl = $.templates("#domain_tmpl");
+	// 	$html_tld = $tmpl.render($data.tld);
+	// 	$("#pricing_table").append($html_tld)
+	// }
+
+	// $(function() {
+	// 	$.getScript("/pricing_eur.json");
+	// });
 </script>
 
 </head>
@@ -291,58 +303,56 @@
 	<!-- HERO END -->
 	
 	<div class="block block--grey">
-		<div class="container testtest">
-			<h3><strong>Domain price chart</strong></h3>
-			<p>This Domain Price Chart is updated daily. It contains the current annual pricing for domain registrations, renewals and transfers in all the Top Level Domains that Freenom operates or manages. The pricing is converted into one currency, as listed above. Pricing of all paid domains are based on cost price, according to the following formula:</p>
-			<p><i>Cost price + gateway fee + ICANN fee (if applicable)</i></p>
-			<p>This Domain Price Chart is only available in English and should be used as reference only. Actual pricing may vary and can be retrieved on a per domain name basis at My Freenom or with the Freenom API. Special and Premium Domains are excluded from this list. Pricing of Special and Premium domains can be retrieved on a per domain name basis at My Freenom or with the Freenom API.</p>
-			<table class="resultTable borderRadius tlds">
-				<thead class="filter" id="tld_pricing">
-					<tr>
-						<th>
+		<div class="container">
+			<h2 class="header text-center">Domain price chart</h2>
+			<p class="paragraph">This Domain Price Chart is updated daily. It contains the current annual pricing for domain registrations, renewals and transfers in all the Top Level Domains that Freenom operates or manages. The pricing is converted into one currency, as listed above. Pricing of all paid domains are based on cost price, according to the following formula:</p>
+			<p class="paragraph">Cost price + gateway fee + ICANN fee (if applicable)</p>
+			<p class="paragraph">This Domain Price Chart is only available in English and should be used as reference only. Actual pricing may vary and can be retrieved on a per domain name basis at My Freenom or with the Freenom API. Special and Premium Domains are excluded from this list. Pricing of Special and Premium domains can be retrieved on a per domain name basis at My Freenom or with the Freenom API.</p>
+			<table class="table tlds" id="tld_pricing">
+				<thead class="table__header">
+					<tr class="table__row">
+						<td>
 							Top Level Domain
-						</th>
-						<th>
+						</td>
+						<td>
 							Registration
-						</th>
-						<th>
+						</td>
+						<td>
 							Renewal
-						</th>
-						<th>
-							Transfer 
-						</th>
+						</td>
+						<td>
+							Transfer
+						</td>
 					</tr>
 				</thead>
 			</table>
-			<table class="resultTable borderRadius services">
-				<thead class="filter" id="tld_services">
-					<tr>
-						<th>							
+			<table class="table services">
+				<thead class="table__header" id="tld_services">
+					<tr class="table__row">
+						<th>
 							Other services
 						</th>
-						<th>							
+						<th>
 							Per year
 						</th>
 					</tr>
 				</thead>
-					<tr>
+					<tr class="table__row">
 						<td class="service">URL Forwarding</td>
 						<td class="price">Free</td>
 					</tr>
-					<tr>
+					<tr class="table__row">
 						<td class="service">Email Forwarding</td>
 						<td class="price">Free</td>
 					</tr>
-					<tr>
+					<tr class="table__row">
 						<td class="service">Freenom DNS Service</td>
 						<td class="price">Free</td>
 					</tr>
-					<tr>
+					<tr class="table__row">
 						<td class="service">ID Shield</td>
 						<td class="price">Free</td>
 					</tr>
-			</table>
-			<table class="table" id="pricing_table">
 			</table>
 		</div>
 	</div>
@@ -429,6 +439,37 @@
 		</div>
 	</div>
 	<!-- FOOTER END -->
+
+	<script type="text/javascript" src="/show_price.php"></script>
+
+	<script type="text/javascript">
+		var _mfq = _mfq || [];
+		(function() {
+			var mf = document.createElement("script"); mf.type = "text/javascript"; mf.async = true;
+			mf.src = "//cdn.mouseflow.com/projects/070520d7-41e5-4d19-a2b7-821e92edeea1.js";
+			document.getElementsByTagName("head")[0].appendChild(mf);
+		})();
+	</script>
+		<script id="domain_tmpl" type="text/x-jsrender">
+			<tr class="table__row">
+				<td class="firstColumn tld">
+					<div class="domainExtension domainExtension--alt">
+						{{:tld}}
+					</div>
+				</td>
+				<td class="column reg">
+					{{:reg}}
+				</td>
+				<td class="column ren">{{:ren}}</td>
+				<td class="column trn">{{:trn}}</td>
+			</tr>
+		</script>
+		<script id="service_tmpl" type="text/x-jsrender">
+			<tr>
+				<td class="service">{{:service}}</td>
+				<td class="price">{{:price}}</td>
+			</tr>
+		</script>	
 
 </body>
 </html>
