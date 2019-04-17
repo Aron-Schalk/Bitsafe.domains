@@ -330,14 +330,18 @@
             <div class="row justify-content-md-center">
                 <div class="col-md-7 title text-center">
                     <h1 class="heading text-white">
-						WHOIS
+						WHOIS Lookup
 					</h1>
                 </div>
                 <div class="col-md-7 search__wrapper">
-                    <form method="get" class="search" id="domainForm">
+					<form class="search" action="http://whois.freenom.com/cgi-bin/whois" method="get">
+						<input type="text" class="search__field" id="idn" value="" name="domainname" placeholder="Type a name here"/>
+						<input class="search__button button button--inverse" name="lookup" value="GO" id="submitBtn" type="submit" />
+					</form>
+                    <!-- <form method="get" class="search" id="domainForm">
                         <input type="text" class="search__field" id="idn" placeholder="Look up any domain" name="domainname" />
                         <a class="search__button button button--inverse" id="submitBtn">Search</a>
-                    </form>
+                    </form> -->
                 </div>
             </div>
         </div>

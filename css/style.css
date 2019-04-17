@@ -677,6 +677,7 @@ h2, h4 {
 /* CONTENT */
 
 .hero {
+	min-height: 720px;
 	max-height: unset;
 	background: #00afef;
 	padding: 160px 0;
@@ -731,7 +732,7 @@ h2, h4 {
 .allResults {
 	display: none;
 	background: #f9f6f6;
-	margin: -480px 0 0;
+	margin: -640px 0 0;
 	padding-bottom: 50px;
 }
 
