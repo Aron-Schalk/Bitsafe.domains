@@ -679,13 +679,7 @@ h2, h4 {
 .hero {
 	max-height: unset;
 	background: #00afef;
-	padding: 200px 0 280px;
-}
-
-@media screen and (min-width: 576px) {
-	.hero {
-		max-height: 800px;
-	}
+	padding: 160px 0;
 }
 
 .face {
