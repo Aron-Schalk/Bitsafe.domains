@@ -15,24 +15,31 @@ export default class MenuToggle {
 
         for (var i=0; i < menuitems.length; i++){
             menuitems[i].addEventListener('click', function () {
-                var hasShow = $(this).find('.submenu').hasClass('submenu--show');
-                $('.submenu').removeClass('submenu--show');
-                $('.arrow').removeClass('arrow--up');
-                
-                if (!hasShow) {
-                    this.querySelector('.submenu').classList.toggle('submenu--show');
-                    this.querySelector('.arrow').classList.toggle('arrow--up');
+                var menu2 = document.querySelectorAll('.menu__item');
+                //console.log(elements);
+                //console.log(menuitems);
+
+                for (var i=0; i < menu2.length; i++){
+                    console.log(this.querySelector('.submenu').classList);
+                    this.querySelector('.submenu').classList.add('submenu--fuckyou');
+                    this.querySelector('.submenu').classList.remove('submenu--show');
+                    //this.querySelector('.arrow').classList.remove('arrow--up');
+                    
                 }
 
+                this.querySelector('.submenu').classList.toggle('submenu--show');
+                this.querySelector('.arrow').classList.toggle('arrow--up');
             }, false);
         }
         
         this.elements.hamburger.addEventListener('click', this.toggle.bind(this));
 
         document.addEventListener("click", function(event) {
-            if (event.target.closest(".menu__item")) return;
-            $('.submenu').removeClass('submenu--show');
-            $('.arrow').removeClass('arrow--up');
+            for (var i=0; i < menuitems.length; i++){
+                if (event.target.closest(".menu__item")) return;
+                this.querySelector('.submenu').classList.remove("submenu--show");
+                this.querySelector('.arrow').classList.remove("arrow--up");
+            }
         });
     }
 
