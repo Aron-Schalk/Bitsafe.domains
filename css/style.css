@@ -324,13 +324,12 @@ h2, h4 {
 		color: #fff;
 		position: relative;
 		padding: 4px 12px;
-		cursor: pointer;
 	}
 }
 
 .menu-link {
 	font-size: 32px;
-	font-weight: bold;
+	font-weight: normal;
 	line-height: 70px;
 	text-decoration: none;
 	padding: 0;
@@ -360,7 +359,6 @@ h2, h4 {
 @media screen and (min-width: 992px) {
 	.menu-link {
 		font-size: 15px;
-		font-weight: normal;
 		line-height: normal;
 		color: #fff;
 		cursor: pointer;
@@ -374,12 +372,14 @@ h2, h4 {
 }
 
 .arrow {
+	font-size: 20px;
 	color: #00afef;
 	transition: transform 0.2s ease-in-out;
 }
 
 @media screen and (min-width: 992px) {
 	.arrow {
+		font-size: 14px;
 		color: #fff;
 	}
 }
