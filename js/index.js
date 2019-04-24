@@ -1,3 +1,3 @@
-import MenuToggle from '/menu.js';
+import MenuToggle from '../js/menu.js';
 
 const menu = new MenuToggle();
